@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Reach: concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#0E1633}
+a{color:#79D4FF}a:hover{color:#B8E8FF}
+:focus-visible{outline:2px solid #79D4FF;outline-offset:3px}
+@keyframes reachflow{to{stroke-dashoffset:-56}}
+.reach-flow{animation:reachflow 1.8s linear infinite}
+@media (prefers-reduced-motion: reduce){.reach-flow{animation:none}}
+</style>
+<style>html{scroll-behavior:smooth}@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}</style>
+</head>
+<body>
+<div style="width: 100%; box-sizing: border-box; background: #0E1633; color: #EEF1FB; font-family: 'Schibsted Grotesk', system-ui, sans-serif; overflow: hidden">
+
+<header style="max-width: 1200px; margin: 0 auto; padding: 22px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" aria-label="Reach, back to top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #EEF1FB">
+<svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path d="M12.5 13.2 21 7.6M12.5 16.8 21 22.4" stroke="#EEF1FB" stroke-width="1.8" stroke-linecap="round"></path><circle cx="9" cy="15" r="4.5" fill="#79D4FF"></circle><circle cx="23.5" cy="6.5" r="3.2" fill="none" stroke="#EEF1FB" stroke-width="1.8"></circle><circle cx="23.5" cy="23.5" r="3.2" fill="none" stroke="#FF7B4A" stroke-width="1.8"></circle></svg>
+<span style="font-size: 22px; font-weight: 700; letter-spacing: -0.03em">Reach</span>
+</a>
+<nav aria-label="Page" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 15px">
+<a href="#how" style="color: #C3CBE8; text-decoration: none">How it works</a>
+<a href="#screens" style="color: #C3CBE8; text-decoration: none">Product</a>
+<span style="font-size: 13px; color: #FFAA85; border: 1px solid rgba(255,123,74,0.45); border-radius: 999px; padding: 5px 12px">Concept preview with mock data</span>
+<a href="#questions" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #79D4FF; color: #0E1633; font-weight: 600; text-decoration: none">Give feedback</a>
+</nav>
+</header>
+
+<section id="top" aria-labelledby="hero-title" style="padding: 64px 24px 112px; background: radial-gradient(55% 45% at 72% 62%, rgba(121,212,255,0.17), rgba(14,22,51,0) 70%), radial-gradient(30% 30% at 88% 40%, rgba(255,123,74,0.10), rgba(14,22,51,0) 70%)">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
+<h1 id="hero-title" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 1000px">Know what every AI agent can reach before your customers ask.</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #C3CBE8; max-width: 640px">Reach maps every AI agent in your company to the systems and data it can actually touch, flags the combinations that could go wrong, and keeps a sealed record of what each agent did.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#screens" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #79D4FF; color: #0E1633; font-size: 16px; font-weight: 700; text-decoration: none">See the product</a>
+<a href="#questions" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; border: 1px solid #3A4A8C; background: rgba(27,39,90,0.6); color: #EEF1FB; font-size: 16px; font-weight: 600; text-decoration: none">Answer three questions</a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #C3CBE8">
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read-only to connect</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cloud, code and SaaS in one map</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Evidence you can export</li>
+</ul>
+
+<div style="margin-top: 36px; border-radius: 22px; border: 1px solid #2E3C7A; background: #121B3E; box-shadow: 0 60px 140px -60px rgba(0,0,0,0.85), 0 0 0 6px rgba(121,212,255,0.04); overflow: hidden">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Agents <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB; font-family: 'JetBrains Mono', ui-monospace, monospace">support-triage</span></p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px">
+<input type="search" aria-label="Search agents and systems" placeholder="Search agents and systems" style="height: 38px; width: 260px; max-width: 100%; box-sizing: border-box; border-radius: 9px; border: 1px solid #2A3770; background: #0E1633; color: #EEF1FB; padding: 0 12px; font-family: inherit; font-size: 14px">
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 38px; padding: 0 12px; border-radius: 9px; border: 1px solid #2A3770; font-size: 14px; color: #C3CBE8"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: #5BE3A8"></span>Production</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap">
+<nav aria-label="Product sections" style="flex: 1 1 180px; padding: 18px 12px; box-sizing: border-box; border-right: 1px solid #2A3770; display: flex; flex-direction: column; gap: 4px; font-size: 14px">
+<a href="#how" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="9" y="2" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="2" y="9" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="9" y="9" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect></svg>Overview</a>
+<a href="#s1" aria-current="page" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; background: #1F2C63; color: #EEF1FB; text-decoration: none; font-weight: 600"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M2.5 14c.8-2.6 3-4 5.5-4s4.7 1.4 5.5 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>Agents</a>
+<a href="#s2" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5h-13Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8 6.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>Findings<span style="margin-left: auto; font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 1px 8px">3</span></a>
+<a href="#s3" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>Action records</a>
+<a href="#s4" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h6l3 3v9H4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M6.5 8.5 8 10l2.5-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Security reviews</a>
+</nav>
+<div style="flex: 100 1 560px; min-width: 0; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px">
+<h2 style="margin: 0; font-size: 22px; font-weight: 500; font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: -0.01em">support-triage</h2>
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Effective reach in production</p>
+</div>
+<svg viewBox="0 0 800 380" role="img" aria-label="Reach graph for support-triage. Inbound email, which is untrusted, feeds the agent. The agent runs as svc-support-agent, which can write to the Orders API, read customer data and post to team chat. The agent also reads help center articles. The risky path runs from inbound email through the agent to Orders API write access." style="width: 100%; height: auto; display: block; border-radius: 14px; background: #101A3B">
+<defs><pattern id="reachdots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#26336B"></circle></pattern></defs>
+<rect width="800" height="380" fill="url(#reachdots)"></rect>
+<path d="M156 290 C196 290 196 190 236 190" fill="none" stroke="#79D4FF" stroke-opacity="0.5" stroke-width="2"></path>
+<path d="M600 190 L650 190" fill="none" stroke="#79D4FF" stroke-opacity="0.5" stroke-width="2"></path>
+<path d="M600 190 C625 190 625 290 650 290" fill="none" stroke="#79D4FF" stroke-opacity="0.5" stroke-width="2"></path>
+<path d="M156 90 C196 90 196 190 236 190 M376 190 L440 190 M600 190 C625 190 625 90 650 90" fill="none" stroke="#FF7B4A" stroke-opacity="0.28" stroke-width="9" stroke-linecap="round"></path>
+<path class="reach-flow" d="M156 90 C196 90 196 190 236 190 M376 190 L440 190 M600 190 C625 190 625 90 650 90" fill="none" stroke="#FF7B4A" stroke-width="2.5" stroke-dasharray="10 4" stroke-linecap="round"></path>
+<rect x="16" y="64" width="140" height="52" rx="11" fill="#2B1F33" stroke="#FF7B4A" stroke-width="1.5"></rect>
+<text x="30" y="85" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#FFAA85">Untrusted input</text>
+<text x="30" y="104" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Inbound email</text>
+<rect x="16" y="264" width="140" height="52" rx="11" fill="#1B275A" stroke="#3A4A8C" stroke-width="1.5"></rect>
+<text x="30" y="285" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#A7B1D8">Read</text>
+<text x="30" y="304" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Help center</text>
+<rect x="236" y="154" width="140" height="72" rx="15" fill="#22306A" stroke="#79D4FF" stroke-width="2"></rect>
+<text x="252" y="180" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#79D4FF">AI agent</text>
+<text x="252" y="203" font-family="JetBrains Mono, monospace" font-size="13" font-weight="500" fill="#EEF1FB">support-triage</text>
+<rect x="440" y="166" width="160" height="48" rx="11" fill="#1B275A" stroke="#3A4A8C" stroke-width="1.5"></rect>
+<text x="454" y="185" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#A7B1D8">Runs as</text>
+<text x="454" y="203" font-family="JetBrains Mono, monospace" font-size="12" fill="#EEF1FB">svc-support-agent</text>
+<rect x="650" y="64" width="140" height="52" rx="11" fill="#2B1F33" stroke="#FF7B4A" stroke-width="1.5"></rect>
+<text x="664" y="85" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#FFAA85">Write access</text>
+<text x="664" y="104" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Orders API</text>
+<rect x="650" y="164" width="140" height="52" rx="11" fill="#1B275A" stroke="#3A4A8C" stroke-width="1.5"></rect>
+<text x="664" y="185" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#A7B1D8">Read</text>
+<text x="664" y="204" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Customer data</text>
+<rect x="650" y="264" width="140" height="52" rx="11" fill="#1B275A" stroke="#3A4A8C" stroke-width="1.5"></rect>
+<text x="664" y="285" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#A7B1D8">Post messages</text>
+<text x="664" y="304" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Team chat</text>
+</svg>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #A7B1D8">
+<li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#FF7B4A" stroke-width="2.5" stroke-dasharray="6 3"></path></svg>Risky path: untrusted input reaches a write</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#79D4FF" stroke-opacity="0.6" stroke-width="2"></path></svg>Access</li>
+</ul>
+</div>
+<aside aria-label="Top finding" style="flex: 1 1 280px; padding: 24px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 12px">Critical</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; letter-spacing: -0.015em">An outside email can lead this agent to change customer orders</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #C3CBE8">It reads every inbound email and runs as an identity that can write to the orders API. Nobody approves its writes.</p>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 0; font-size: 14px; border-top: 1px solid #2A3770">
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Reaches</dt><dd style="margin: 0; font-weight: 600">5 systems</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Can write to</dt><dd style="margin: 0; font-weight: 600; text-align: right">Orders API, team chat</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Owner</dt><dd style="margin: 0; font-weight: 600; color: #FFAA85">None assigned</dd></div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
+<a href="#s2" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #79D4FF; color: #0E1633; font-size: 14px; font-weight: 700; text-decoration: none">Review fixes</a>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 14px; font-weight: 600">Assign owner</button>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-title" style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 44px">
+<h2 id="how-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; max-width: 760px">From the first connection to evidence you can hand over.</h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 32px">
+<li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #79D4FF">
+<span style="font-size: 15px; font-weight: 700; color: #79D4FF">Step 1</span>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Connect, read-only</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Cloud accounts, code, SaaS apps and your identity provider. Nothing in them is changed.</p>
+</li>
+<li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #3A4A8C">
+<span style="font-size: 15px; font-weight: 700; color: #A7B1D8">Step 2</span>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Map effective reach</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Follow chains of permissions to everything an agent can touch, not only what it was granted directly.</p>
+</li>
+<li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #3A4A8C">
+<span style="font-size: 15px; font-weight: 700; color: #A7B1D8">Step 3</span>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Flag risky combinations</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Agents that read untrusted content and can also change data, move money or send data out.</p>
+</li>
+<li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #FF7B4A">
+<span style="font-size: 15px; font-weight: 700; color: #FFAA85">Step 4</span>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Prove what happened</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">A sealed record of every agent action, ready to replay and to export for a review.</p>
+</li>
+</ol>
+</section>
+
+<div id="screens" style="display: flex; flex-direction: column">
+
+<section id="s1" aria-labelledby="s1-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Agent inventory</p>
+<h2 id="s1-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Every agent, who owns it, and what it can really reach.</h2>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Including agents nobody registered: ones that only show up as a service account or an app permission.</p>
+</div>
+<div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
+<div role="group" aria-label="Filter agents" style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" aria-pressed="true" style="min-height: 38px; padding: 0 14px; border-radius: 9px; border: 1px solid #79D4FF; background: rgba(121,212,255,0.12); color: #EEF1FB; font-family: inherit; font-size: 14px; font-weight: 600">All agents 5</button>
+<button type="button" aria-pressed="false" style="min-height: 38px; padding: 0 14px; border-radius: 9px; border: 1px solid #2A3770; background: transparent; color: #C3CBE8; font-family: inherit; font-size: 14px">No owner 2</button>
+<button type="button" aria-pressed="false" style="min-height: 38px; padding: 0 14px; border-radius: 9px; border: 1px solid #2A3770; background: transparent; color: #C3CBE8; font-family: inherit; font-size: 14px">Can write 4</button>
+</div>
+<button type="button" style="min-height: 38px; padding: 0 14px; border-radius: 9px; border: 1px solid #2A3770; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 14px; font-weight: 600">Export list</button>
+</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 940px; border-collapse: collapse; font-size: 14px">
+<thead>
+<tr style="text-align: left; color: #A7B1D8; font-size: 13px">
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Agent</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Runs as</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Owner</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Effective reach</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: rgba(255,123,74,0.06)">
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">support-triage</span><span style="font-size: 13px; color: #A7B1D8">Answers customer email</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-support-agent</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; color: #FFAA85; font-weight: 600">None</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Inbound email, untrusted</span><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Orders API, write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Customer data, read</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">2 more</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 11px">Critical</span></td>
+</tr>
+<tr>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">refund-orchestrator</span><span style="font-size: 13px; color: #A7B1D8">Issues refunds</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-payments-agent</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62">Payments team</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Payments API, refunds write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Orders DB, read</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Support desk, read and write</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: rgba(255,123,74,0.16); color: #FFB596; border: 1px solid rgba(255,123,74,0.5); border-radius: 999px; padding: 3px 11px">High</span></td>
+</tr>
+<tr>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">hr-helper</span><span style="font-size: 13px; color: #A7B1D8">Not registered by anyone</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-size: 13px; color: #C3CBE8">App permission</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; color: #FFAA85; font-weight: 600">Unknown</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">HR system, employee records read</span><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Team chat, post</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: rgba(255,123,74,0.16); color: #FFB596; border: 1px solid rgba(255,123,74,0.5); border-radius: 999px; padding: 3px 11px">High</span></td>
+</tr>
+<tr>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">lead-enricher</span><span style="font-size: 13px; color: #A7B1D8">Updates sales contacts</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-growth-bot</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62">Growth team</td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">CRM contacts, read and write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Web, outbound requests</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px">Medium</span></td>
+</tr>
+<tr>
+<td style="padding: 18px 20px"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">sql-analyst</span><span style="font-size: 13px; color: #A7B1D8">Answers data questions</span></div></td>
+<td style="padding: 18px 20px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-analytics-ro</td>
+<td style="padding: 18px 20px">Data platform</td>
+<td style="padding: 18px 20px"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Warehouse read, includes customer tables</span></div></td>
+<td style="padding: 18px 20px"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px">Medium</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section id="s2" aria-labelledby="s2-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #FFAA85">Findings</p>
+<h2 id="s2-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">The combinations that turn a helpful agent into an incident.</h2>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">One permission alone can look harmless. The risk is the chain: untrusted input on one side, the power to change data on the other.</p>
+</div>
+<div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Findings <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB">Outside email can change orders</span></p>
+<span style="font-size: 13px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 12px">Critical</span>
+</div>
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex: 3 1 480px; min-width: 0; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 26px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; letter-spacing: -0.02em">An outside email can lead support-triage to change customer orders</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8; max-width: 620px">Instructions hidden in an email could be acted on, and a change would reach the orders database before any person sees it.</p>
+</div>
+<ol aria-label="Path from untrusted input to data change" style="list-style: none; margin: 0; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: #101A3B; border: 1px solid #2A3770; border-radius: 14px">
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #2B1F33; border: 1px solid #FF7B4A; border-radius: 10px"><span style="font-size: 12px; color: #FFAA85">Untrusted input</span><span style="font-size: 14px; font-weight: 600">Inbound email</span></li>
+<li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #22306A; border: 1px solid #79D4FF; border-radius: 10px"><span style="font-size: 12px; color: #79D4FF">AI agent</span><span style="font-size: 14px; font-family: 'JetBrains Mono', ui-monospace, monospace">support-triage</span></li>
+<li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #1B275A; border: 1px solid #3A4A8C; border-radius: 10px"><span style="font-size: 12px; color: #A7B1D8">Runs as</span><span style="font-size: 14px; font-family: 'JetBrains Mono', ui-monospace, monospace">svc-support-agent</span></li>
+<li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #2B1F33; border: 1px solid #FF7B4A; border-radius: 10px"><span style="font-size: 12px; color: #FFAA85">Write access</span><span style="font-size: 14px; font-weight: 600">Orders API</span></li>
+<li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #1B275A; border: 1px solid #3A4A8C; border-radius: 10px"><span style="font-size: 12px; color: #A7B1D8">Data</span><span style="font-size: 14px; font-weight: 600">Orders database</span></li>
+</ol>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">What it can do today</h4>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5">
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Read any inbound customer email, including attachments</li>
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Cancel, change or refund any order through the orders API</li>
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Act with no approval step on any write</li>
+</ul>
+</div>
+</div>
+<div style="flex: 2 1 340px; padding: 28px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 14px">
+<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Choose fixes</h4>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Require approval for order changes</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">A person confirms cancellations and refunds before they run.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Limit write access to refunds</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Remove cancel and change from the agent's identity.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #2A3770; border-radius: 12px; cursor: pointer"><input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Split reading from acting</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">One agent reads email; a second, narrower one changes orders.</span></span></label>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 14px; border-radius: 12px; background: #101A3B; border: 1px solid #2A3770">
+<span style="font-size: 14px; color: #C3CBE8">Risk with selected fixes</span>
+<span style="display: flex; align-items: center; gap: 8px"><span style="font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 3px 10px">Critical</span><svg width="20" height="12" viewBox="0 0 20 12" aria-label="becomes" role="img"><path d="M1 6h16M12 1.5 17 6l-5 4.5" fill="none" stroke="#A7B1D8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 10px">Low</span></span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px">
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Create ticket</button>
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Accept risk</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="s3" aria-labelledby="s3-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Action records</p>
+<h2 id="s3-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">A sealed record of what an agent did, and why it was allowed.</h2>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Each record is chained to the one before and signed, so it can't be edited afterwards. It keeps the permissions in force at that moment, so you can explain a decision months later.</p>
+</div>
+<div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Action records <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB; font-family: 'JetBrains Mono', ui-monospace, monospace">act_8f92a1</span></p>
+<span style="display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 4px 12px"><svg width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>Sealed and replayable</span>
+</div>
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex: 3 1 480px; min-width: 0; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<dl style="margin: 0; display: flex; flex-wrap: wrap; gap: 18px 36px">
+<div style="display: flex; flex-direction: column; gap: 5px"><dt style="font-size: 13px; color: #A7B1D8">Time</dt><dd style="margin: 0; font-size: 15px; font-family: 'JetBrains Mono', ui-monospace, monospace">2026-10-14 14:32:08 UTC</dd></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><dt style="font-size: 13px; color: #A7B1D8">Agent</dt><dd style="margin: 0; font-size: 15px; font-family: 'JetBrains Mono', ui-monospace, monospace">refund-orchestrator</dd></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><dt style="font-size: 13px; color: #A7B1D8">Acting for</dt><dd style="margin: 0; font-size: 15px">Support user 4417</dd></div>
+<div style="display: flex; flex-direction: column; gap: 5px"><dt style="font-size: 13px; color: #A7B1D8">Model</dt><dd style="margin: 0; font-size: 15px">[Provider model], version pinned</dd></div>
+</dl>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Steps</h3>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<li style="display: flex; gap: 16px">
+<div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #79D4FF; margin-top: 5px"></span><span style="flex: 1; width: 2px; background: #2E3C7A; margin: 4px 0"></span></div>
+<div style="flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding-bottom: 22px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">get_order(order_id: 10492)</span><span style="font-size: 14px; color: #A7B1D8">Returned the order</span></div>
+</li>
+<li style="display: flex; gap: 16px">
+<div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #79D4FF; margin-top: 5px"></span><span style="flex: 1; width: 2px; background: #2E3C7A; margin: 4px 0"></span></div>
+<div style="flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding-bottom: 22px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">check_refund_policy(order_id: 10492)</span><span style="font-size: 14px; color: #A7B1D8">Eligible under policy v12</span></div>
+</li>
+<li style="display: flex; gap: 16px">
+<div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FF7B4A; margin-top: 5px"></span></div>
+<div style="flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">issue_refund(order_id: 10492, amount: 4500)</span><span style="font-size: 14px; color: #FFAA85">Refund created</span></div>
+</li>
+</ol>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Inputs it saw</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Customer message <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">9c1e…4b07</span></span>
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Refund policy v12 <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">20af…e91c</span></span>
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Order history <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">c7d3…0a58</span></span>
+</div>
+</div>
+</div>
+<div style="flex: 2 1 340px; padding: 28px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; border-radius: 14px; background: #101A3B; border: 1px solid #2A3770">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Why it was allowed</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">Refunds up to 4,999 are approved automatically for this agent when it acts for a support user.</p>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Permission snapshot <span style="font-family: 'JetBrains Mono', ui-monospace, monospace">g-2026-10-14.3</span></p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Chain of records</h3>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; border: 1px solid #2A3770; font-size: 13px; color: #A7B1D8"><span>Record 4,815</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace">b71d…09e3</span></li>
+<li aria-hidden="true" style="height: 14px; width: 2px; background: #3A4A8C; margin-left: 24px"></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 14px; border-radius: 11px; border: 1.5px solid #79D4FF; background: rgba(121,212,255,0.08); font-size: 14px"><span style="font-weight: 600">This record, 4,816</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace">4e8a…c21f</span></li>
+<li aria-hidden="true" style="height: 14px; width: 2px; background: #3A4A8C; margin-left: 24px"></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; border: 1px dashed #3A4A8C; font-size: 13px; color: #A7B1D8"><span>Next record</span><span>Not written yet</span></li>
+</ol>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Signed with key <span style="font-family: 'JetBrains Mono', ui-monospace, monospace">k-2026-q4</span></p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Replay this run</button>
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Verify</button>
+<button type="button" style="min-height: 46px; padding: 0 18px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Export</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="s4" aria-labelledby="s4-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
+<div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Security reviews</p>
+<h2 id="s4-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Answer a customer's questions about your agents from evidence.</h2>
+</div>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Answers are drafted only where there is evidence behind them. Everything else is left for you, so nothing is claimed that can't be shown.</p>
+</div>
+<div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid #2A3770; background: #151F45">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Security reviews <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB">[Customer name]</span></p>
+<p style="margin: 0; font-size: 17px; font-weight: 600">AI agents section</p>
+</div>
+<div style="flex: 0 1 320px; display: flex; flex-direction: column; gap: 8px">
+<p style="margin: 0; font-size: 14px; color: #C3CBE8">3 of 5 answers drafted from evidence</p>
+<div role="img" aria-label="3 of 5 answers drafted" style="height: 8px; border-radius: 999px; background: #22306A; overflow: hidden"><div style="width: 60%; height: 100%; border-radius: 999px; background: #79D4FF"></div></div>
+</div>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column">
+<li style="padding: 22px 24px; border-bottom: 1px solid #222E62; display: flex; flex-direction: column; gap: 14px; background: rgba(121,212,255,0.04)">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 10px 16px">
+<h3 style="flex: 1 1 380px; margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4">Which systems and data can your AI agents access?</h3>
+<span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 4px 11px">Drafted from evidence</span>
+</div>
+<p style="margin: 0; padding: 16px 18px; border-radius: 12px; background: #101A3B; border: 1px solid #2A3770; font-size: 15px; line-height: 1.65; color: #E1E6F6; max-width: 820px">We run five AI agents. Each has a named identity and a listed set of systems it can reach. Two can change data: one can issue refunds up to a set limit, and one can update order status after a person approves. None can export customer data outside our systems.</p>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Evidence: agent inventory and permission snapshot from 14 Oct 2026</p>
+</li>
+<li style="padding: 20px 24px; border-bottom: 1px solid #222E62; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px">
+<h3 style="flex: 1 1 380px; margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4">How are agent write actions limited and approved?</h3>
+<span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 4px 11px">Drafted from evidence</span>
+</li>
+<li style="padding: 20px 24px; border-bottom: 1px solid #222E62; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px">
+<h3 style="flex: 1 1 380px; margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4">Can you show what an agent did for a specific customer?</h3>
+<span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 4px 11px">Drafted from evidence</span>
+</li>
+<li style="padding: 20px 24px; border-bottom: 1px solid #222E62; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4">Do model providers train on your customers' data?</h3><p style="margin: 0; font-size: 14px; color: #A7B1D8">Depends on your provider contracts, which Reach can't see.</p></div>
+<button type="button" style="min-height: 40px; padding: 0 16px; border-radius: 9px; border: 1px solid rgba(255,123,74,0.55); background: rgba(255,123,74,0.1); color: #FFB596; font-family: inherit; font-size: 14px; font-weight: 600">Add your answer</button>
+</li>
+<li style="padding: 20px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px 16px">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 4px"><h3 style="margin: 0; font-size: 17px; font-weight: 600; line-height: 1.4">Where is customer data processed and stored?</h3><p style="margin: 0; font-size: 14px; color: #A7B1D8">Cloud regions are known; confirm what your model providers use.</p></div>
+<button type="button" style="min-height: 40px; padding: 0 16px; border-radius: 9px; border: 1px solid rgba(255,123,74,0.55); background: rgba(255,123,74,0.1); color: #FFB596; font-family: inherit; font-size: 14px; font-weight: 600">Add your answer</button>
+</li>
+</ul>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; padding: 18px 24px; border-top: 1px solid #2A3770; background: #151F45">
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Export as PDF</button>
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Copy answers</button>
+</div>
+</div>
+</section>
+
+</div>
+
+<section id="questions" aria-labelledby="questions-title" style="padding: 0 24px 96px">
+<div style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; border-radius: 28px; background: #DFF3FF; color: #0E1633; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 36px 64px">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px">
+<h2 id="questions-title" style="margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800">Does this match what your customers are asking?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3B66">Reply to the message this link came with. One line is plenty.</p>
+</div>
+<ol style="flex: 1 1 420px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">1</span>Have customers asked what your AI agents can access, or for a record of what they did?</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">2</span>Which of these four screens would you want first, if any?</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">3</span>What is missing, or wrong for how your team works?</li>
+</ol>
+</div>
+</section>
+
+<footer style="max-width: 1200px; margin: 0 auto; padding: 0 24px 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #A7B1D8">
+<span>Reach is a concept for discussion.</span>
+<span>Every screen shows mock data. Nothing here is a live product.</span>
+</footer>
+
+</div>
+</body>
+</html>
