@@ -16,10 +16,119 @@ a{color:#79D4FF}a:hover{color:#B8E8FF}
 .reach-flow{animation:reachflow 1.8s linear infinite}
 @media (prefers-reduced-motion: reduce){.reach-flow{animation:none}}
 </style>
-<style>html{scroll-behavior:smooth}@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}</style>
+<style>
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+#app{overflow:visible!important;overflow-x:clip!important}
+#app > header{position:sticky;top:0;z-index:40;max-width:none!important;padding-left:max(24px,calc((100% - 1152px) / 2))!important;padding-right:max(24px,calc((100% - 1152px) / 2))!important;transition:background-color .2s ease,box-shadow .2s ease}
+#app > header.rx-scrolled{background:rgba(14,22,51,0.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 #2A3770}
+@media (max-width:760px){#app > header{position:static}}
+#how,#screens,#s1,#s2,#s3,#s4,#questions{scroll-margin-top:90px}
+.rx-active{color:#EEF1FB!important;text-decoration:underline!important;text-decoration-color:#79D4FF!important;text-decoration-thickness:2px!important;text-underline-offset:8px}
+
+button{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+#app button,#app a[style*="min-height"]{cursor:pointer;transition:filter .15s ease,transform .08s ease,background-color .15s ease,border-color .15s ease}
+#app button:hover:not(:disabled),#app a[style*="min-height"]:hover{filter:brightness(1.12)}
+#app button[style*="transparent"]:hover:not(:disabled){background:rgba(121,212,255,0.08)!important}
+#app button:active:not(:disabled),#app a[style*="min-height"]:active{transform:translateY(1px)}
+#app button:disabled{opacity:.5;cursor:not-allowed}
+#app nav a[style*="min-height: 40px"]:hover{background:rgba(121,212,255,0.07)}
+
+.rx-flash{animation:rxflash 1.5s ease}
+@keyframes rxflash{0%{box-shadow:0 0 0 0 rgba(121,212,255,0)}20%{box-shadow:0 0 0 4px rgba(121,212,255,0.55)}100%{box-shadow:0 0 0 0 rgba(121,212,255,0)}}
+.rx-row-flash{animation:rxrow 2.4s ease}
+@keyframes rxrow{0%,55%{background:rgba(121,212,255,0.18)}100%{background:transparent}}
+@media (prefers-reduced-motion: reduce){.rx-flash,.rx-row-flash{animation:none}}
+
+#s1 tbody tr{cursor:pointer;transition:background-color .15s ease}
+#s1 tbody tr:hover,#s1 tbody tr:focus-within{background:rgba(121,212,255,0.07)!important}
+.rx-rowlink{background:none;border:0;padding:0;color:inherit;font:500 14px 'JetBrains Mono',ui-monospace,monospace;cursor:pointer;text-align:left;justify-content:flex-start!important}
+.rx-rowlink:hover{text-decoration:underline;text-underline-offset:4px}
+
+#top svg text{pointer-events:none}
+.rx-node{cursor:pointer;transition:filter .15s ease}
+.rx-node:hover,.rx-node:focus{filter:brightness(1.4);outline:none}
+.rx-node:focus-visible{stroke:#FFFFFF;stroke-width:2.5px}
+.rx-tip{position:absolute;z-index:20;max-width:250px;padding:10px 12px;border-radius:10px;background:#EEF1FB;color:#0E1633;display:flex;flex-direction:column;gap:3px;font-size:13px;line-height:1.45;pointer-events:none;box-shadow:0 18px 40px -16px rgba(0,0,0,.7)}
+.rx-tip strong{font-size:14px}
+.rx-tip-kind{color:#46507A;font-size:12px;font-weight:600}
+
+.rx-results{position:absolute;top:calc(100% + 6px);left:0;width:min(340px,calc(100vw - 48px));z-index:30;padding:6px;border-radius:12px;background:#1B275A;border:1px solid #3A4A8C;box-shadow:0 24px 60px -20px rgba(0,0,0,.7);display:flex;flex-direction:column;max-height:320px;overflow:auto;box-sizing:border-box}
+.rx-option{width:100%;min-height:40px;padding:0 12px;border:0;border-radius:8px;background:transparent;color:#EEF1FB;font:500 14px 'Schibsted Grotesk',system-ui,sans-serif;cursor:pointer;justify-content:space-between!important;text-align:left}
+.rx-option.active,.rx-option:hover{background:#26357A}
+.rx-kind{font-size:12px;color:#A7B1D8}
+.rx-empty{margin:0;padding:10px 12px;font-size:14px;color:#A7B1D8}
+
+.rx-menu{position:fixed;z-index:90;min-width:210px;padding:6px;border-radius:12px;background:#1B275A;border:1px solid #3A4A8C;box-shadow:0 24px 60px -20px rgba(0,0,0,.7);display:flex;flex-direction:column}
+.rx-menu-item{min-height:42px;padding:0 12px;border:0;border-radius:8px;background:transparent;color:#EEF1FB;font:500 14px 'Schibsted Grotesk',system-ui,sans-serif;cursor:pointer;justify-content:flex-start!important}
+.rx-menu-item:hover,.rx-menu-item:focus-visible{background:#26357A;outline:none}
+
+.rx-toasts{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);display:flex;flex-direction:column;gap:10px;z-index:100;width:min(520px,calc(100% - 32px));pointer-events:none}
+.rx-toast{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:14px;background:#EEF1FB;color:#0E1633;font:500 15px/1.45 'Schibsted Grotesk',system-ui,sans-serif;box-shadow:0 20px 50px -20px rgba(0,0,0,.7);opacity:0;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease}
+.rx-toast.in{opacity:1;transform:none}
+.rx-toast svg{flex:0 0 auto;margin-top:2px}
+.rx-toast-ok svg{color:#0B7A55}
+.rx-toast-warn svg{color:#C2410C}
+
+.rx-spin{width:14px;height:14px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:rxspin .7s linear infinite;box-sizing:border-box}
+@keyframes rxspin{to{transform:rotate(360deg)}}
+.rx-badge{display:inline-flex;align-items:center;gap:5px;margin-left:10px;font-size:12px;font-weight:600;color:#8CF0C4;background:rgba(91,227,168,0.12);border:1px solid rgba(91,227,168,0.4);border-radius:999px;padding:2px 9px;vertical-align:middle}
+
+.rx-overlay{position:fixed;inset:0;background:rgba(6,10,26,.62);z-index:70;opacity:0;transition:opacity .25s ease}
+.rx-overlay.open{opacity:1}
+.rx-drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);z-index:80;background:#121B3E;border-left:1px solid #2E3C7A;box-shadow:-30px 0 80px -30px rgba(0,0,0,.7);padding:28px;box-sizing:border-box;overflow-y:auto;display:flex;flex-direction:column;gap:18px;color:#EEF1FB;font-family:'Schibsted Grotesk',system-ui,sans-serif;transform:translateX(100%);transition:transform .28s cubic-bezier(.2,.8,.2,1)}
+.rx-drawer.open{transform:none}
+@media (prefers-reduced-motion: reduce){.rx-drawer,.rx-overlay,.rx-toast{transition:none}}
+.rx-drawer-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.rx-drawer h2{margin:4px 0 0;font:500 22px 'JetBrains Mono',ui-monospace,monospace;word-break:break-word}
+.rx-muted{margin:0;color:#A7B1D8;font-size:14px}
+.rx-icon-btn{flex:0 0 auto;width:44px;height:44px;border-radius:10px;border:1px solid #3A4A8C;background:transparent;color:#EEF1FB;cursor:pointer}
+.rx-icon-btn:hover{background:rgba(121,212,255,0.08)}
+.rx-drawer-desc{margin:0;font-size:15px;line-height:1.6;color:#C3CBE8}
+.rx-dl{margin:0;border-top:1px solid #2A3770}
+.rx-dl div{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #2A3770;font-size:14px}
+.rx-dl dt{color:#A7B1D8}
+.rx-dl dd{margin:0;font-weight:600;text-align:right}
+.rx-h3{margin:6px 0 0;font-size:15px;font-weight:600;color:#A7B1D8}
+.rx-reach{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.rx-reach li{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-radius:10px;background:#1B275A;font-size:14px;border:1px solid transparent}
+.rx-reach li.hot{background:rgba(255,123,74,0.12);border-color:rgba(255,123,74,0.4)}
+.rx-reach li.hot .rx-muted{color:#FFB596}
+.rx-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px}
+.rx-actions-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.rx-btn,.rx-btn-ghost,.rx-btn-warn{min-height:46px;padding:0 20px;border-radius:10px;font:700 15px 'Schibsted Grotesk',system-ui,sans-serif;cursor:pointer;transition:filter .15s ease}
+.rx-btn{border:0;background:#79D4FF;color:#0E1633}
+.rx-btn-warn{border:0;background:#FF7B4A;color:#1A0F0A}
+.rx-btn-ghost{border:1px solid #3A4A8C;background:transparent;color:#EEF1FB;font-weight:600}
+.rx-btn:hover,.rx-btn-warn:hover{filter:brightness(1.1)}
+.rx-btn-ghost:hover{background:rgba(121,212,255,0.08)}
+.rx-toggle{min-height:36px;padding:0 12px;border-radius:8px;border:1px solid #3A4A8C;background:transparent;color:#EEF1FB;font:600 13px 'Schibsted Grotesk',system-ui,sans-serif;cursor:pointer}
+.rx-toggle:hover{background:rgba(121,212,255,0.08)}
+
+.rx-dialog{border:1px solid #2E3C7A;border-radius:18px;background:#121B3E;color:#EEF1FB;padding:28px;width:min(480px,calc(100% - 32px));box-sizing:border-box;font-family:'Schibsted Grotesk',system-ui,sans-serif}
+.rx-dialog::backdrop{background:rgba(6,10,26,.66)}
+.rx-dlg-form{display:flex;flex-direction:column;gap:10px}
+.rx-dlg-form h2{margin:0 0 4px;font-size:22px;letter-spacing:-.015em}
+.rx-label{font-size:14px;font-weight:600;color:#C3CBE8;margin-top:6px}
+.rx-field{width:100%;box-sizing:border-box;border-radius:10px;border:1px solid #3A4A8C;background:#0E1633;color:#EEF1FB;padding:12px;font:15px/1.5 'Schibsted Grotesk',system-ui,sans-serif;resize:vertical}
+select.rx-field{height:46px;padding:0 12px}
+.rx-err{margin:0;color:#FFB596;font-size:14px}
+.rx-editor{display:flex;flex-direction:column;gap:8px;max-width:820px}
+
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body.rx-print-s4 #app > *:not(#screens){display:none!important}
+  body.rx-print-s4 #screens > section:not(#s4){display:none!important}
+  body.rx-print-s4 #s4 > div:first-child,body.rx-print-s4 #s4 button,body.rx-print-s4 .rx-toasts{display:none!important}
+  body.rx-print-s4 #s4{padding:0!important}
+  body.rx-print-s4 .rx-panel{display:flex!important}
+}
+
+</style>
 </head>
 <body>
-<div style="width: 100%; box-sizing: border-box; background: #0E1633; color: #EEF1FB; font-family: 'Schibsted Grotesk', system-ui, sans-serif; overflow: hidden">
+<div id="app" style="width: 100%; box-sizing: border-box; background: #0E1633; color: #EEF1FB; font-family: 'Schibsted Grotesk', system-ui, sans-serif; overflow: hidden">
 
 <header style="max-width: 1200px; margin: 0 auto; padding: 22px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
 <a href="#top" aria-label="Reach, back to top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #EEF1FB">
@@ -426,5 +535,656 @@ a{color:#79D4FF}a:hover{color:#B8E8FF}
 </footer>
 
 </div>
+<script>
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const byText = (root, sel, t) => $$(sel, root).find(e => e.textContent.trim().startsWith(t));
+  const wait = ms => new Promise(r => setTimeout(r, ms));
+  const ACCENT = '#79D4FF';
+
+  function h(tag, props, ...kids) {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(props || {})) {
+      if (v == null || v === false) continue;
+      if (k === 'style') el.style.cssText = v;
+      else if (k === 'class') el.className = v;
+      else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? '' : v);
+    }
+    for (const kid of kids.flat()) {
+      if (kid == null) continue;
+      el.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+    }
+    return el;
+  }
+
+  const ICON = {
+    check: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 8.5 6.5 11.5 12.5 4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    warn: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5h-13Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 6.5v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    close: '<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    spin: '<span class="rx-spin" aria-hidden="true"></span>'
+  };
+
+  const PILL = {
+    Critical: 'background:#FF7B4A;color:#1A0F0A;border:1px solid #FF7B4A;',
+    High: 'background:rgba(255,123,74,0.16);color:#FFB596;border:1px solid rgba(255,123,74,0.5);',
+    Medium: 'background:rgba(121,212,255,0.12);color:#A9E2FF;border:1px solid rgba(121,212,255,0.4);',
+    Low: 'background:rgba(91,227,168,0.12);color:#8CF0C4;border:1px solid rgba(91,227,168,0.45);',
+    Muted: 'background:#1B275A;color:#C3CBE8;border:1px solid #3A4A8C;'
+  };
+  const pillCss = level => 'display:inline-flex;align-items:center;font-size:12px;font-weight:700;border-radius:999px;padding:3px 11px;' + (PILL[level] || PILL.Muted);
+
+  /* ---------- toasts ---------- */
+  const toasts = h('div', { class: 'rx-toasts', 'aria-live': 'polite' });
+  document.body.append(toasts);
+  function toast(msg, tone = 'ok') {
+    const t = h('div', { class: 'rx-toast rx-toast-' + tone, role: 'status' });
+    t.innerHTML = tone === 'warn' ? ICON.warn : ICON.check;
+    t.append(h('span', null, msg));
+    toasts.append(t);
+    while (toasts.children.length > 2) toasts.firstElementChild.remove();
+    requestAnimationFrame(() => t.classList.add('in'));
+    setTimeout(() => { t.classList.remove('in'); setTimeout(() => t.remove(), 250); }, 3800);
+  }
+
+  function download(name, text, type) {
+    const url = URL.createObjectURL(new Blob([text], { type }));
+    const a = h('a', { href: url, download: name });
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1500);
+  }
+
+  async function copyText(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) {
+      const ta = h('textarea', { style: 'position:fixed;opacity:0;top:0;left:0' }); ta.value = text;
+      document.body.append(ta); ta.select();
+      let ok = false; try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+      ta.remove(); return ok;
+    }
+  }
+
+  function setBusy(btn, label) {
+    btn.disabled = true; btn.setAttribute('aria-busy', 'true');
+    btn.innerHTML = ICON.spin; btn.append(label);
+  }
+  function setDone(btn, label, enabled = true) {
+    btn.removeAttribute('aria-busy'); btn.disabled = !enabled;
+    btn.innerHTML = ICON.check; btn.append(label);
+  }
+  function setLabel(btn, label) {
+    btn.removeAttribute('aria-busy'); btn.disabled = false; btn.textContent = label;
+  }
+
+  /* ---------- data ---------- */
+  const AGENTS = {
+    'support-triage': { desc: 'Answers customer email and updates orders.', runsAs: 'svc-support-agent', owner: null, risk: 'Critical', canWrite: true,
+      reach: [['Inbound email', 'Untrusted input', true], ['Orders API', 'Write', true], ['Customer data', 'Read', false], ['Team chat', 'Post messages', true], ['Help center', 'Read', false]],
+      seen: '2 minutes ago', actions: '1,284 in the last 7 days', cta: ['View finding', '#s2'] },
+    'refund-orchestrator': { desc: 'Issues refunds for eligible orders.', runsAs: 'svc-payments-agent', owner: 'Payments team', risk: 'High', canWrite: true,
+      reach: [['Payments API', 'Refunds write', true], ['Orders DB', 'Read', false], ['Support desk', 'Read and write', true]],
+      seen: '6 minutes ago', actions: '312 in the last 7 days', cta: ['Open latest record', '#s3'] },
+    'hr-helper': { desc: 'Not registered by anyone. Found through an app permission in your HR system.', runsAs: 'App permission', owner: null, risk: 'High', canWrite: true,
+      reach: [['HR system', 'Employee records read', false], ['Team chat', 'Post messages', true]],
+      seen: 'Yesterday', actions: '47 in the last 7 days', cta: null },
+    'lead-enricher': { desc: 'Looks up companies on the web and updates sales contacts.', runsAs: 'svc-growth-bot', owner: 'Growth team', risk: 'Medium', canWrite: true,
+      reach: [['CRM contacts', 'Read and write', true], ['Web', 'Outbound requests', false]],
+      seen: '1 hour ago', actions: '2,930 in the last 7 days', cta: null },
+    'sql-analyst': { desc: 'Answers data questions by querying the warehouse.', runsAs: 'svc-analytics-ro', owner: 'Data platform', risk: 'Medium', canWrite: false,
+      reach: [['Warehouse', 'Read, includes customer tables', false]],
+      seen: '3 hours ago', actions: '164 in the last 7 days', cta: null }
+  };
+  const TEAMS = ['Support team', 'Payments team', 'Platform team', 'Security team'];
+  const SYSTEMS = [...new Set(Object.values(AGENTS).flatMap(a => a.reach.map(r => r[0])))];
+
+  /* ---------- sticky header and nav ---------- */
+  const header = $('#app > header');
+  const onScroll = () => header.classList.toggle('rx-scrolled', window.scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  const navLinks = $$('#app > header nav a').filter(a => ['#how', '#screens'].includes(a.getAttribute('href')));
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      const link = navLinks.find(a => a.getAttribute('href') === '#' + e.target.id);
+      if (link) link.classList.toggle('rx-active', e.isIntersecting);
+    }), { rootMargin: '-45% 0px -50% 0px' });
+    ['how', 'screens'].forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+  }
+
+  function flashSection(id) {
+    const sec = document.getElementById(id);
+    if (!sec || !/^s[1-4]$/.test(id)) return;
+    const win = sec.children[1];
+    setTimeout(() => { win.classList.remove('rx-flash'); void win.offsetWidth; win.classList.add('rx-flash'); }, 500);
+  }
+  function goTo(hash) {
+    const el = document.getElementById(hash.slice(1));
+    if (!el) return;
+    el.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', hash);
+    flashSection(hash.slice(1));
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const hash = a.getAttribute('href');
+    if (hash.length > 1 && document.getElementById(hash.slice(1))) { e.preventDefault(); goTo(hash); }
+  });
+
+  /* hero sidebar: active item follows clicks */
+  const sideLinks = $$('#top nav[aria-label="Product sections"] a');
+  sideLinks.forEach(a => a.addEventListener('click', () => {
+    sideLinks.forEach(o => {
+      const on = o === a;
+      o.style.background = on ? '#1F2C63' : 'transparent';
+      o.style.color = on ? '#EEF1FB' : '#C3CBE8';
+      o.style.fontWeight = on ? '600' : '400';
+      if (on) o.setAttribute('aria-current', 'page'); else o.removeAttribute('aria-current');
+    });
+  }));
+
+  /* ---------- owner menu ---------- */
+  let openMenu = null;
+  function closeMenu(refocus = true) {
+    if (!openMenu) return;
+    const m = openMenu; openMenu = null;
+    m.el.remove(); m.anchor.setAttribute('aria-expanded', 'false');
+    if (refocus && document.contains(m.anchor)) m.anchor.focus();
+  }
+  function ownerMenu(anchor, name) {
+    if (openMenu) { const same = openMenu.anchor === anchor; closeMenu(false); if (same) return; }
+    const items = TEAMS.map(t => h('button', { type: 'button', role: 'menuitem', class: 'rx-menu-item', onclick: () => { closeMenu(); setOwner(name, t); } }, t));
+    const el = h('div', { class: 'rx-menu', role: 'menu', 'aria-label': 'Choose an owner for ' + name }, items);
+    el.addEventListener('keydown', e => {
+      const i = items.indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+      if (e.key === 'ArrowUp') { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+      if (e.key === 'Tab') closeMenu(false);
+    });
+    document.body.append(el);
+    const r = anchor.getBoundingClientRect();
+    const top = r.bottom + 8 + el.offsetHeight > innerHeight ? r.top - el.offsetHeight - 8 : r.bottom + 8;
+    el.style.top = Math.max(8, top) + 'px';
+    el.style.left = Math.max(8, Math.min(r.left, innerWidth - el.offsetWidth - 8)) + 'px';
+    anchor.setAttribute('aria-haspopup', 'menu'); anchor.setAttribute('aria-expanded', 'true');
+    openMenu = { el, anchor, y: window.scrollY };
+    items[0].focus();
+  }
+  document.addEventListener('click', e => {
+    if (openMenu && !openMenu.el.contains(e.target) && !openMenu.anchor.contains(e.target)) closeMenu(false);
+  });
+  addEventListener('scroll', () => { if (openMenu && Math.abs(window.scrollY - openMenu.y) > 40) closeMenu(false); }, { passive: true });
+
+  /* ---------- hero finding ---------- */
+  const heroAside = $('#top aside');
+  const heroOwner = $$('dd', heroAside)[2];
+  const assignBtn = byText(heroAside, 'button', 'Assign owner');
+  assignBtn.addEventListener('click', () => ownerMenu(assignBtn, 'support-triage'));
+
+  /* ---------- agent table ---------- */
+  const s1 = $('#s1');
+  const tbody = $('tbody', s1);
+  const rows = $$('tr', tbody);
+  const rowByName = {};
+  rows.forEach(r => {
+    const nameSpan = r.cells[0].querySelector('span');
+    const name = nameSpan.textContent.trim();
+    rowByName[name] = r;
+    r.dataset.agent = name;
+    const btn = h('button', { type: 'button', class: 'rx-rowlink', 'aria-haspopup': 'dialog' }, name);
+    nameSpan.replaceWith(btn);
+    r.addEventListener('click', () => openDrawer(name));
+  });
+  const emptyRow = h('tr', { hidden: true }, h('td', { colspan: '5', style: 'padding:32px 20px;text-align:center;color:#A7B1D8;font-size:15px' }, 'Every agent has an owner.'));
+  tbody.append(emptyRow);
+
+  const filterBtns = $$('[role="group"] button', s1);
+  const FILTERS = ['all', 'noowner', 'write'];
+  let filter = 'all';
+  function styleFilter(btn, on) {
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.style.borderColor = on ? ACCENT : '#2A3770';
+    btn.style.background = on ? 'rgba(121,212,255,0.12)' : 'transparent';
+    btn.style.color = on ? '#EEF1FB' : '#C3CBE8';
+    btn.style.fontWeight = on ? '600' : '400';
+  }
+  function updateCounts() {
+    const names = Object.keys(AGENTS);
+    filterBtns[0].textContent = 'All agents ' + names.length;
+    filterBtns[1].textContent = 'No owner ' + names.filter(n => !AGENTS[n].owner).length;
+    filterBtns[2].textContent = 'Can write ' + names.filter(n => AGENTS[n].canWrite).length;
+  }
+  function applyFilter() {
+    let shown = 0;
+    rows.forEach(r => {
+      const a = AGENTS[r.dataset.agent];
+      const ok = filter === 'all' || (filter === 'noowner' && !a.owner) || (filter === 'write' && a.canWrite);
+      r.hidden = !ok; if (ok) shown++;
+    });
+    emptyRow.hidden = shown > 0;
+    filterBtns.forEach((b, i) => styleFilter(b, FILTERS[i] === filter));
+  }
+  filterBtns.forEach((b, i) => b.addEventListener('click', () => { filter = FILTERS[i]; applyFilter(); }));
+
+  byText(s1, 'button', 'Export list').addEventListener('click', () => {
+    const cell = v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+    const lines = [['Agent', 'Description', 'Runs as', 'Owner', 'Effective reach', 'Risk']]
+      .concat(Object.entries(AGENTS).map(([n, a]) => [n, a.desc, a.runsAs, a.owner || 'None', a.reach.map(x => x[0] + ' (' + x[1] + ')').join('; '), a.risk]));
+    download('agents.csv', lines.map(l => l.map(cell).join(',')).join('\n'), 'text/csv');
+    toast('Downloaded agents.csv with ' + Object.keys(AGENTS).length + ' agents');
+  });
+
+  function setOwner(name, team) {
+    AGENTS[name].owner = team;
+    const ownerCell = rowByName[name].cells[2];
+    ownerCell.textContent = team; ownerCell.style.color = '#EEF1FB'; ownerCell.style.fontWeight = '400';
+    if (name === 'support-triage') {
+      heroOwner.textContent = team; heroOwner.style.color = '#EEF1FB';
+      assignBtn.textContent = 'Change owner';
+    }
+    updateCounts(); applyFilter();
+    if (drawerAgent === name) renderDrawer(name, true);
+    toast(team + ' now owns ' + name);
+  }
+
+  function highlightSystem(sys) {
+    filter = 'all'; applyFilter();
+    const hits = Object.keys(AGENTS).filter(n => AGENTS[n].reach.some(r => r[0] === sys));
+    goTo('#s1');
+    setTimeout(() => hits.forEach(n => { const r = rowByName[n]; r.classList.remove('rx-row-flash'); void r.offsetWidth; r.classList.add('rx-row-flash'); }), 450);
+    toast(hits.length + (hits.length === 1 ? ' agent can' : ' agents can') + ' reach ' + sys);
+  }
+
+  /* ---------- agent drawer ---------- */
+  const overlay = h('div', { class: 'rx-overlay', hidden: true, onclick: () => closeDrawer() });
+  const drawer = h('div', { class: 'rx-drawer', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'rx-drawer-title', hidden: true });
+  document.body.append(overlay, drawer);
+  let drawerAgent = null, lastFocus = null;
+
+  function renderDrawer(name, keepFocus) {
+    const a = AGENTS[name];
+    const closeBtn = h('button', { type: 'button', class: 'rx-icon-btn', 'aria-label': 'Close details', onclick: () => closeDrawer() });
+    closeBtn.innerHTML = ICON.close;
+    const dRow = (k, v, warn) => h('div', null, h('dt', null, k), h('dd', { style: warn ? 'color:#FFAA85' : null }, v));
+    const actions = h('div', { class: 'rx-actions' });
+    if (!a.owner) {
+      const ob = h('button', { type: 'button', class: 'rx-btn' }, 'Assign owner');
+      ob.addEventListener('click', e => { e.stopPropagation(); ownerMenu(ob, name); });
+      actions.append(ob);
+    }
+    if (a.cta) actions.append(h('button', { type: 'button', class: a.owner ? 'rx-btn' : 'rx-btn-ghost', onclick: () => { closeDrawer(false); setTimeout(() => goTo(a.cta[1]), 280); } }, a.cta[0]));
+    actions.append(h('button', { type: 'button', class: 'rx-btn-ghost', onclick: () => {
+      download(name + '.json', JSON.stringify({ agent: name, ...a, cta: undefined, note: 'Mock data from a concept page' }, null, 2), 'application/json');
+      toast('Downloaded ' + name + '.json');
+    } }, 'Download report'));
+    drawer.replaceChildren(
+      h('div', { class: 'rx-drawer-head' }, h('div', null, h('p', { class: 'rx-muted' }, 'Agent'), h('h2', { id: 'rx-drawer-title' }, name)), closeBtn),
+      h('p', { class: 'rx-drawer-desc' }, a.desc),
+      h('span', { style: pillCss(a.risk) + 'align-self:flex-start' }, a.risk + ' risk'),
+      h('dl', { class: 'rx-dl' }, dRow('Runs as', a.runsAs), dRow('Owner', a.owner || 'None assigned', !a.owner), dRow('Last active', a.seen), dRow('Actions', a.actions)),
+      h('h3', { class: 'rx-h3' }, 'Effective reach'),
+      h('ul', { class: 'rx-reach' }, a.reach.map(([sys, acc, hot]) => h('li', { class: hot ? 'hot' : '' }, h('span', { style: 'font-weight:600' }, sys), h('span', { class: 'rx-muted' }, acc)))),
+      actions
+    );
+    if (keepFocus) closeBtn.focus();
+    return closeBtn;
+  }
+  function openDrawer(name) {
+    closeMenu(false);
+    lastFocus = document.activeElement;
+    drawerAgent = name;
+    const closeBtn = renderDrawer(name);
+    overlay.hidden = false; drawer.hidden = false;
+    document.documentElement.style.overflow = 'hidden';
+    requestAnimationFrame(() => { overlay.classList.add('open'); drawer.classList.add('open'); });
+    closeBtn.focus({ preventScroll: true });
+  }
+  function closeDrawer(refocus = true) {
+    if (drawer.hidden) return;
+    closeMenu(false);
+    drawerAgent = null;
+    overlay.classList.remove('open'); drawer.classList.remove('open');
+    document.documentElement.style.overflow = '';
+    setTimeout(() => { overlay.hidden = true; drawer.hidden = true; }, 260);
+    if (refocus && lastFocus && document.contains(lastFocus)) lastFocus.focus({ preventScroll: true });
+  }
+  drawer.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const f = $$('button:not(:disabled), a[href]', drawer);
+    if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  });
+
+  /* ---------- hero graph ---------- */
+  const graph = $('#top svg[role="img"]');
+  graph.setAttribute('role', 'group');
+  const gWrap = graph.parentElement; gWrap.style.position = 'relative';
+  const tip = h('div', { class: 'rx-tip', role: 'tooltip', id: 'rx-tip', hidden: true });
+  gWrap.append(tip);
+  const NODES = [
+    { t: 'Inbound email', k: 'Untrusted input', d: 'Anyone outside the company can write to this inbox. Click to see every agent that reads it.', sys: 'Inbound email' },
+    { t: 'Help center', k: 'Read', d: 'Public articles. Low risk on its own.', sys: 'Help center' },
+    { t: 'support-triage', k: 'AI agent', d: 'Answers customer email. No owner assigned. Click for details.', agent: 'support-triage' },
+    { t: 'svc-support-agent', k: 'Runs as', d: 'The service identity the agent uses. Every permission below comes through it.' },
+    { t: 'Orders API', k: 'Write access', d: 'Can cancel, change and refund orders. Click to see every agent that reaches it.', sys: 'Orders API' },
+    { t: 'Customer data', k: 'Read', d: 'Names, emails and order history.', sys: 'Customer data' },
+    { t: 'Team chat', k: 'Post messages', d: 'Can post in any public channel.', sys: 'Team chat' }
+  ];
+  $$('rect', graph).slice(1).forEach((r, i) => {
+    const n = NODES[i]; if (!n) return;
+    r.classList.add('rx-node');
+    r.setAttribute('tabindex', '0');
+    r.setAttribute('role', 'button');
+    r.setAttribute('aria-label', n.t + ', ' + n.k + '. ' + n.d);
+    const show = () => {
+      tip.replaceChildren(h('strong', null, n.t), h('span', { class: 'rx-tip-kind' }, n.k), h('span', null, n.d));
+      tip.hidden = false;
+      const rr = r.getBoundingClientRect(), wr = gWrap.getBoundingClientRect();
+      const left = Math.max(8, Math.min(rr.left - wr.left + rr.width / 2 - tip.offsetWidth / 2, wr.width - tip.offsetWidth - 8));
+      let top = rr.top - wr.top - tip.offsetHeight - 10;
+      if (top < 0) top = rr.bottom - wr.top + 10;
+      tip.style.left = left + 'px'; tip.style.top = top + 'px';
+    };
+    const hide = () => { tip.hidden = true; };
+    const act = () => { hide(); if (n.agent) openDrawer(n.agent); else if (n.sys) highlightSystem(n.sys); else show(); };
+    r.addEventListener('mouseenter', show); r.addEventListener('mouseleave', hide);
+    r.addEventListener('focus', show); r.addEventListener('blur', hide);
+    r.addEventListener('click', act);
+    r.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); act(); } });
+  });
+
+  /* ---------- hero search ---------- */
+  const search = $('#top input[type="search"]');
+  const sWrap = search.parentElement; sWrap.style.position = 'relative';
+  const results = h('div', { class: 'rx-results', role: 'listbox', id: 'rx-results', 'aria-label': 'Search results', hidden: true });
+  sWrap.append(results);
+  search.setAttribute('role', 'combobox');
+  search.setAttribute('aria-controls', 'rx-results');
+  search.setAttribute('aria-expanded', 'false');
+  search.setAttribute('aria-autocomplete', 'list');
+  const ITEMS = Object.keys(AGENTS).map(n => ({ label: n, kind: 'Agent', go: () => openDrawer(n) }))
+    .concat(SYSTEMS.map(s => ({ label: s, kind: 'System', go: () => highlightSystem(s) })));
+  let matches = [], active = -1;
+  function renderResults() {
+    const q = search.value.trim().toLowerCase();
+    matches = ITEMS.filter(it => !q || it.label.toLowerCase().includes(q)).slice(0, 7);
+    active = matches.length ? 0 : -1;
+    if (!matches.length) {
+      results.replaceChildren(h('p', { class: 'rx-empty' }, 'No agents or systems match "' + search.value.trim() + '"'));
+    } else {
+      results.replaceChildren(...matches.map((it, i) => {
+        const opt = h('button', { type: 'button', role: 'option', id: 'rx-opt-' + i, class: 'rx-option' + (i === active ? ' active' : ''), 'aria-selected': i === active ? 'true' : 'false', tabindex: '-1' },
+          h('span', null, it.label), h('span', { class: 'rx-kind' }, it.kind));
+        opt.addEventListener('mousedown', e => e.preventDefault());
+        opt.addEventListener('click', () => choose(i));
+        return opt;
+      }));
+    }
+    results.hidden = false; search.setAttribute('aria-expanded', 'true');
+    syncActive();
+  }
+  function syncActive() {
+    $$('.rx-option', results).forEach((o, i) => { o.classList.toggle('active', i === active); o.setAttribute('aria-selected', i === active ? 'true' : 'false'); });
+    if (active >= 0) search.setAttribute('aria-activedescendant', 'rx-opt-' + active); else search.removeAttribute('aria-activedescendant');
+  }
+  function hideResults() { results.hidden = true; search.setAttribute('aria-expanded', 'false'); }
+  function choose(i) { const it = matches[i]; if (!it) return; hideResults(); search.value = ''; search.blur(); it.go(); }
+  search.addEventListener('focus', renderResults);
+  search.addEventListener('input', renderResults);
+  search.addEventListener('blur', () => setTimeout(hideResults, 120));
+  search.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (matches.length) { active = (active + 1) % matches.length; syncActive(); } }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (matches.length) { active = (active - 1 + matches.length) % matches.length; syncActive(); } }
+    else if (e.key === 'Enter') { e.preventDefault(); choose(active); }
+  });
+
+  /* ---------- finding: fixes, ticket, accept risk ---------- */
+  const s2 = $('#s2');
+  const s2Pill = s2.children[1].children[0].lastElementChild;
+  const fixInputs = $$('input[type="checkbox"]', s2);
+  const riskBox = $$('div', s2).find(d => d.firstElementChild && d.firstElementChild.textContent.trim() === 'Risk with selected fixes');
+  const afterPill = riskBox.children[1].lastElementChild;
+  const createBtn = byText(s2, 'button', 'Create ticket');
+  const acceptBtn = byText(s2, 'button', 'Accept risk');
+  let ticketDone = false, accepted = false;
+  function updateFixes() {
+    const n = fixInputs.filter(i => i.checked).length;
+    const level = n === 0 ? 'Critical' : n === 1 ? 'Medium' : 'Low';
+    afterPill.style.cssText = pillCss(level); afterPill.textContent = level;
+    fixInputs.forEach(i => {
+      const l = i.closest('label');
+      l.style.borderColor = i.checked ? ACCENT : '#2A3770';
+      l.style.background = i.checked ? 'rgba(121,212,255,0.07)' : 'transparent';
+    });
+    if (!ticketDone) {
+      createBtn.textContent = n ? 'Create ticket with ' + n + (n > 1 ? ' fixes' : ' fix') : 'Choose a fix first';
+      createBtn.disabled = n === 0;
+    }
+  }
+  fixInputs.forEach(i => i.addEventListener('change', updateFixes));
+  updateFixes();
+
+  createBtn.addEventListener('click', async () => {
+    if (ticketDone) { toast('Ticket SEC-142 is already open'); return; }
+    const n = fixInputs.filter(i => i.checked).length;
+    if (!n) return;
+    setBusy(createBtn, 'Creating ticket');
+    await wait(900);
+    ticketDone = true;
+    setDone(createBtn, 'Ticket SEC-142 created');
+    if (!accepted) { s2Pill.style.cssText = pillCss('Medium') + 'font-size:13px;padding:4px 12px'; s2Pill.textContent = 'Fix in progress'; }
+    toast('Ticket SEC-142 created with ' + n + (n > 1 ? ' fixes' : ' fix'));
+  });
+
+  const dlg = h('dialog', { class: 'rx-dialog', 'aria-labelledby': 'rx-dlg-title' });
+  document.body.append(dlg);
+  acceptBtn.addEventListener('click', () => {
+    if (accepted) { toast('This risk is already accepted', 'warn'); return; }
+    const ta = h('textarea', { id: 'rx-reason', class: 'rx-field', rows: '4', placeholder: 'For example: support-triage is paused until the approval step ships.' });
+    const sel = h('select', { id: 'rx-days', class: 'rx-field' }, h('option', { value: '30' }, '30 days'), h('option', { value: '60' }, '60 days'), h('option', { value: '90' }, '90 days'));
+    const err = h('p', { class: 'rx-err', hidden: true }, 'Add a reason so reviewers know why this was accepted.');
+    const form = h('form', { class: 'rx-dlg-form', method: 'dialog' },
+      h('h2', { id: 'rx-dlg-title' }, 'Accept this risk?'),
+      h('p', { class: 'rx-muted', style: 'line-height:1.55' }, 'The finding stays open and shows as accepted until the date you choose. Your name and reason are recorded.'),
+      h('label', { for: 'rx-reason', class: 'rx-label' }, 'Reason'), ta, err,
+      h('label', { for: 'rx-days', class: 'rx-label' }, 'Accept for'), sel,
+      h('div', { class: 'rx-actions-row', style: 'margin-top:12px' },
+        h('button', { type: 'submit', class: 'rx-btn-warn' }, 'Accept risk'),
+        h('button', { type: 'button', class: 'rx-btn-ghost', onclick: () => dlg.close() }, 'Cancel')));
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!ta.value.trim()) { err.hidden = false; ta.focus(); return; }
+      dlg.close();
+      accepted = true;
+      const until = new Date(Date.now() + Number(sel.value) * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+      s2Pill.style.cssText = pillCss('Muted') + 'font-size:13px;padding:4px 12px';
+      s2Pill.textContent = 'Accepted until ' + until;
+      acceptBtn.textContent = 'Risk accepted';
+      toast('Risk accepted until ' + until + '. Reviewers will see your reason.');
+    });
+    dlg.replaceChildren(form);
+    dlg.showModal();
+    ta.focus();
+  });
+
+  /* ---------- action record: replay, verify, export ---------- */
+  const s3 = $('#s3');
+  const [stepsOl, chainOl] = $$('ol', s3);
+  const steps = Array.from(stepsOl.children);
+  const dots = steps.map(li => li.firstElementChild.firstElementChild);
+  const dotColors = dots.map(d => d.style.background);
+  const replayBtn = byText(s3, 'button', 'Replay this run');
+  const verifyBtn = byText(s3, 'button', 'Verify');
+  const exportBtn = byText(s3, 'button', 'Export');
+
+  replayBtn.addEventListener('click', async () => {
+    setBusy(replayBtn, 'Replaying');
+    $$('.rx-badge', stepsOl).forEach(b => b.remove());
+    dots.forEach(d => { d.style.background = '#3A4A8C'; });
+    for (let i = 0; i < steps.length; i++) {
+      await wait(650);
+      dots[i].style.background = dotColors[i];
+      const badge = h('span', { class: 'rx-badge' }); badge.innerHTML = ICON.check; badge.append('Matches original');
+      steps[i].children[1].lastElementChild.append(badge);
+    }
+    setLabel(replayBtn, 'Replay again');
+    toast('Replay finished: 3 of 3 steps matched the original run');
+  });
+
+  verifyBtn.addEventListener('click', async () => {
+    setBusy(verifyBtn, 'Verifying');
+    const blocks = Array.from(chainOl.children).filter(li => !li.hasAttribute('aria-hidden')).slice(0, 2);
+    await wait(1000);
+    blocks.forEach(b => { b.dataset.border = b.style.border; b.style.border = '1.5px solid #5BE3A8'; });
+    setDone(verifyBtn, 'Verified');
+    toast('Chain intact. Signature valid for record 4,816.');
+    setTimeout(() => { blocks.forEach(b => { b.style.border = b.dataset.border; }); setLabel(verifyBtn, 'Verify'); }, 5000);
+  });
+
+  exportBtn.addEventListener('click', () => {
+    const record = {
+      id: 'act_8f92a1', time: '2026-10-14T14:32:08Z', agent: 'refund-orchestrator', acting_for: 'support user 4417',
+      model: '[provider model], version pinned',
+      inputs: [{ name: 'customer message', sha256: '9c1e…4b07' }, { name: 'refund policy v12', sha256: '20af…e91c' }, { name: 'order history', sha256: 'c7d3…0a58' }],
+      steps: [
+        { call: 'get_order', args: { order_id: 10492 }, result: 'returned the order' },
+        { call: 'check_refund_policy', args: { order_id: 10492 }, result: 'eligible under policy v12' },
+        { call: 'issue_refund', args: { order_id: 10492, amount: 4500 }, result: 'refund created' }
+      ],
+      allowed_by: { rule: 'Refunds up to 4,999 are approved automatically when acting for a support user', permission_snapshot: 'g-2026-10-14.3' },
+      seal: { record: 4816, record_hash: 'sha256:4e8a…c21f', previous_hash: 'sha256:b71d…09e3', key: 'k-2026-q4' },
+      note: 'Mock data from a concept page'
+    };
+    download('act_8f92a1.json', JSON.stringify(record, null, 2), 'application/json');
+    toast('Downloaded act_8f92a1.json');
+  });
+
+  /* ---------- security review ---------- */
+  const s4 = $('#s4');
+  const qList = s4.children[1].children[1];
+  const qRows = Array.from(qList.children);
+  const progressP = $$('p', s4).find(p => p.textContent.trim().startsWith('3 of 5'));
+  const barWrap = progressP.nextElementSibling;
+  const bar = barWrap.firstElementChild;
+  const ANSWERS = [
+    { q: 'Which systems and data can your AI agents access?', a: null, src: 'evidence' },
+    { q: 'How are agent write actions limited and approved?', a: 'Agents change data only through named identities with listed permissions. Refunds above 4,999 and every order cancellation need a person to approve them. Every write is recorded and sealed.', src: 'evidence', ev: 'Evidence: permission snapshot and approval rules from 14 Oct 2026' },
+    { q: 'Can you show what an agent did for a specific customer?', a: 'Yes. Every agent action is stored as a sealed record linked to the customer it served, and we can export those records for any customer on request.', src: 'evidence', ev: 'Evidence: sealed action records, searchable by customer' },
+    { q: "Do model providers train on your customers' data?", a: null, src: 'you' },
+    { q: 'Where is customer data processed and stored?', a: null, src: 'you' }
+  ];
+  const ansStyle = 'margin:0;padding:16px 18px;border-radius:12px;background:#101A3B;border:1px solid #2A3770;font-size:15px;line-height:1.65;color:#E1E6F6;max-width:820px';
+  const evStyle = 'margin:0;font-size:13px;color:#A7B1D8';
+  const headStyle = 'display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 16px';
+  const rightStyle = 'display:flex;flex-wrap:wrap;align-items:center;gap:10px';
+  const asColumn = li => { li.style.flexDirection = 'column'; li.style.alignItems = 'stretch'; li.style.flexWrap = 'nowrap'; li.style.gap = '14px'; };
+  function makeToggle(panel, open) {
+    const t = h('button', { type: 'button', class: 'rx-toggle', 'aria-expanded': open ? 'true' : 'false', 'aria-controls': panel.id }, open ? 'Hide answer' : 'Show answer');
+    t.addEventListener('click', () => {
+      const nowOpen = panel.hidden;
+      panel.hidden = !nowOpen;
+      t.setAttribute('aria-expanded', nowOpen ? 'true' : 'false');
+      t.textContent = nowOpen ? 'Hide answer' : 'Show answer';
+    });
+    return t;
+  }
+  function makePanel(i, text, ev) {
+    return h('div', { class: 'rx-panel', id: 'rx-ans-' + i, style: 'display:flex;flex-direction:column;gap:10px' }, h('p', { style: ansStyle }, text), h('p', { style: evStyle }, ev));
+  }
+
+  // row 0: already open
+  (() => {
+    const li = qRows[0];
+    const head = li.firstElementChild;
+    const pill = head.lastElementChild;
+    const [ansP, evP] = [li.children[1], li.children[2]];
+    ANSWERS[0].a = ansP.textContent.trim();
+    const panel = h('div', { class: 'rx-panel', id: 'rx-ans-0', style: 'display:flex;flex-direction:column;gap:10px' });
+    panel.append(ansP, evP);
+    head.append(h('div', { style: rightStyle }, pill, makeToggle(panel, true)));
+    li.append(panel);
+  })();
+
+  // rows 1-2: drafted, collapsed
+  [1, 2].forEach(i => {
+    const li = qRows[i];
+    const [h3, pill] = Array.from(li.children);
+    const panel = makePanel(i, ANSWERS[i].a, ANSWERS[i].ev); panel.hidden = true;
+    li.replaceChildren(h('div', { style: headStyle }, h3, h('div', { style: rightStyle }, pill, makeToggle(panel, false))), panel);
+    asColumn(li);
+  });
+
+  // rows 3-4: need input
+  function updateProgress() {
+    const mine = ANSWERS.filter(x => x.src === 'you' && x.a).length;
+    const ready = ANSWERS.filter(x => x.a).length;
+    progressP.textContent = mine ? ready + ' of 5 answers ready, ' + mine + ' added by you' : '3 of 5 answers drafted from evidence';
+    bar.style.width = (ready / 5 * 100) + '%';
+    barWrap.setAttribute('aria-label', ready + ' of 5 answers ready');
+    return ready;
+  }
+  [3, 4].forEach(i => {
+    const li = qRows[i];
+    const [info, addBtn] = Array.from(li.children);
+    const head = h('div', { style: headStyle }, info, addBtn);
+    li.replaceChildren(head);
+    asColumn(li);
+    addBtn.addEventListener('click', () => {
+      addBtn.hidden = true;
+      const id = 'rx-q' + i;
+      const ta = h('textarea', { id, class: 'rx-field', rows: '4', placeholder: 'Write the answer you would send to this customer.' });
+      const err = h('p', { class: 'rx-err', hidden: true }, 'Write an answer before saving.');
+      const cancel = () => { ed.remove(); addBtn.hidden = false; addBtn.focus(); };
+      const save = () => {
+        const v = ta.value.trim();
+        if (!v) { err.hidden = false; ta.focus(); return; }
+        ANSWERS[i].a = v;
+        ed.remove();
+        const hint = info.querySelector('p'); if (hint) hint.remove();
+        const panel = makePanel(i, v, 'Added by you just now');
+        const pill = h('span', { style: pillCss('Low') }, 'Answered by you');
+        addBtn.replaceWith(h('div', { style: rightStyle }, pill, makeToggle(panel, true)));
+        li.append(panel);
+        const ready = updateProgress();
+        toast(ready === 5 ? 'All 5 answers are ready to export' : 'Answer saved');
+      };
+      const ed = h('div', { class: 'rx-editor' },
+        h('label', { for: id, class: 'rx-label' }, 'Your answer'), ta, err,
+        h('div', { class: 'rx-actions-row' },
+          h('button', { type: 'button', class: 'rx-btn', onclick: save }, 'Save answer'),
+          h('button', { type: 'button', class: 'rx-btn-ghost', onclick: cancel }, 'Cancel')));
+      li.append(ed);
+      ta.focus();
+    });
+  });
+
+  byText(s4, 'button', 'Copy answers').addEventListener('click', async () => {
+    const text = 'AI agents section\n\n' + ANSWERS.map((x, i) => (i + 1) + '. ' + x.q + '\n' + (x.a || '[Needs your input]')).join('\n\n');
+    const ok = await copyText(text);
+    const missing = ANSWERS.filter(x => !x.a).length;
+    if (!ok) { toast('Copy was blocked by the browser. Select the answers and copy them manually.', 'warn'); return; }
+    toast('Copied ' + (5 - missing) + ' answers' + (missing ? ', ' + missing + ' still need your input' : ''));
+  });
+  byText(s4, 'button', 'Export as PDF').addEventListener('click', () => {
+    document.body.classList.add('rx-print-s4');
+    const done = () => { document.body.classList.remove('rx-print-s4'); removeEventListener('afterprint', done); };
+    addEventListener('afterprint', done);
+    window.print();
+  });
+
+  /* ---------- Escape ---------- */
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape') return;
+    if (openMenu) { closeMenu(); return; }
+    if (!drawer.hidden) { closeDrawer(); return; }
+    if (!results.hidden) hideResults();
+  });
+
+  updateCounts(); applyFilter();
+})();
+
+</script>
 </body>
 </html>
