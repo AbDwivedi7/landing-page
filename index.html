@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Aver</title>
+<title>Reach - HQ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;display=swap">
@@ -47,6 +47,11 @@ button{display:inline-flex;align-items:center;justify-content:center;gap:8px}
 .rx-rowlink:hover{text-decoration:underline;text-underline-offset:4px}
 
 #top svg text{pointer-events:none}
+.rx-swipe{display:none;margin:-6px 0 0;font-size:13px;color:#A7B1D8}
+@media (max-width:700px){
+  .rx-swipe{display:block}
+  #top nav[aria-label="Product sections"]{display:none!important}
+}
 .rx-node{cursor:pointer;transition:filter .15s ease}
 .rx-node:hover,.rx-node:focus{filter:brightness(1.4);outline:none}
 .rx-node:focus-visible{stroke:#FFFFFF;stroke-width:2.5px}
@@ -138,18 +143,18 @@ select.rx-field{height:46px;padding:0 12px}
 <nav aria-label="Page" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 26px; font-size: 15px">
 <a href="#how" style="color: #C3CBE8; text-decoration: none">How it works</a>
 <a href="#screens" style="color: #C3CBE8; text-decoration: none">Product</a>
-<span style="font-size: 13px; color: #FFAA85; border: 1px solid rgba(255,123,74,0.45); border-radius: 999px; padding: 5px 12px">Concept preview with mock data</span>
-<a href="#questions" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #79D4FF; color: #0E1633; font-weight: 600; text-decoration: none">Give feedback</a>
+<span style="font-size: 13px; color: #A9E2FF; border: 1px solid rgba(121,212,255,0.45); border-radius: 999px; padding: 5px 12px">Early access open</span>
+<a href="#questions" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px; background: #79D4FF; color: #0E1633; font-weight: 600; text-decoration: none">Get early access</a>
 </nav>
 </header>
 
 <section id="top" aria-labelledby="hero-title" style="padding: 64px 24px 112px; background: radial-gradient(55% 45% at 72% 62%, rgba(121,212,255,0.17), rgba(14,22,51,0) 70%), radial-gradient(30% 30% at 88% 40%, rgba(255,123,74,0.10), rgba(14,22,51,0) 70%)">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
-<h1 id="hero-title" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 1000px">Know what every AI agent can reach before your customers ask.</h1>
-<p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #C3CBE8; max-width: 640px">Reach maps every AI agent in your company to the systems and data it can actually touch, flags the combinations that could go wrong, and keeps a sealed record of what each agent did.</p>
+<h1 id="hero-title" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 1000px">Answer customer security reviews about your AI agents with evidence.</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #C3CBE8; max-width: 640px">Reach maps what each of your AI agents can actually touch, flags unsafe write access, and drafts answers to the agent questions in customer security reviews, each one backed by evidence.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#screens" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #79D4FF; color: #0E1633; font-size: 16px; font-weight: 700; text-decoration: none">See the product</a>
-<a href="#questions" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; border: 1px solid #3A4A8C; background: rgba(27,39,90,0.6); color: #EEF1FB; font-size: 16px; font-weight: 600; text-decoration: none">Answer three questions</a>
+<a href="#s4" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; border: 1px solid #3A4A8C; background: rgba(27,39,90,0.6); color: #EEF1FB; font-size: 16px; font-weight: 600; text-decoration: none">See a sample security review</a>
 </div>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #C3CBE8">
 <li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read-only to connect</li>
@@ -178,7 +183,8 @@ select.rx-field{height:46px;padding:0 12px}
 <h2 style="margin: 0; font-size: 22px; font-weight: 500; font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: -0.01em">support-triage</h2>
 <p style="margin: 0; font-size: 14px; color: #A7B1D8">Effective reach in production</p>
 </div>
-<svg viewBox="0 0 800 380" role="img" aria-label="Reach graph for support-triage. Inbound email, which is untrusted, feeds the agent. The agent runs as svc-support-agent, which can write to the Orders API, read customer data and post to team chat. The agent also reads help center articles. The risky path runs from inbound email through the agent to Orders API write access." style="width: 100%; height: auto; display: block; border-radius: 14px; background: #101A3B">
+<div style="overflow-x: auto; border-radius: 14px; background: #101A3B">
+<svg viewBox="0 0 800 380" role="img" aria-label="Reach graph for support-triage. Inbound email, which is untrusted, feeds the agent. The agent runs as svc-support-agent, which can write to the Orders API, read customer data and post to team chat. The agent also reads help center articles. The risky path runs from inbound email through the agent to Orders API write access." style="width: 100%; min-width: 640px; height: auto; display: block; border-radius: 14px; background: #101A3B">
 <defs><pattern id="reachdots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1" fill="#26336B"></circle></pattern></defs>
 <rect width="800" height="380" fill="url(#reachdots)"></rect>
 <path d="M156 290 C196 290 196 190 236 190" fill="none" stroke="#79D4FF" stroke-opacity="0.5" stroke-width="2"></path>
@@ -208,6 +214,7 @@ select.rx-field{height:46px;padding:0 12px}
 <text x="664" y="285" font-family="Schibsted Grotesk, sans-serif" font-size="11" fill="#A7B1D8">Post messages</text>
 <text x="664" y="304" font-family="Schibsted Grotesk, sans-serif" font-size="14" font-weight="600" fill="#EEF1FB">Team chat</text>
 </svg>
+</div>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #A7B1D8">
 <li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#FF7B4A" stroke-width="2.5" stroke-dasharray="6 3"></path></svg>Risky path: untrusted input reaches a write</li>
 <li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#79D4FF" stroke-opacity="0.6" stroke-width="2"></path></svg>Access</li>
@@ -393,7 +400,7 @@ select.rx-field{height:46px;padding:0 12px}
 <p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Action records</p>
 <h2 id="s3-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">A sealed record of what an agent did, and why it was allowed.</h2>
 </div>
-<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Each record is chained to the one before and signed, so it can't be edited afterwards. It keeps the permissions in force at that moment, so you can explain a decision months later.</p>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Each record is locked to the one before it, so nobody can quietly change what happened. It also saves the permissions in force at that moment, so you can explain a decision months later.</p>
 </div>
 <div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
@@ -428,9 +435,9 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="display: flex; flex-direction: column; gap: 12px">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Inputs it saw</h3>
 <div style="display: flex; flex-wrap: wrap; gap: 8px">
-<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Customer message <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">9c1e…4b07</span></span>
-<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Refund policy v12 <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">20af…e91c</span></span>
-<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Order history <span style="font-family: 'JetBrains Mono', ui-monospace, monospace; color: #A7B1D8">c7d3…0a58</span></span>
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Customer message</span>
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Refund policy v12</span>
+<span style="font-size: 13px; background: #1B275A; border-radius: 8px; padding: 7px 11px">Order history</span>
 </div>
 </div>
 </div>
@@ -438,18 +445,18 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; border-radius: 14px; background: #101A3B; border: 1px solid #2A3770">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Why it was allowed</h3>
 <p style="margin: 0; font-size: 15px; line-height: 1.55">Refunds up to 4,999 are approved automatically for this agent when it acts for a support user.</p>
-<p style="margin: 0; font-size: 13px; color: #A7B1D8">Permission snapshot <span style="font-family: 'JetBrains Mono', ui-monospace, monospace">g-2026-10-14.3</span></p>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Based on the permissions at the time, saved with this record.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Chain of records</h3>
+<h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">History that can't be edited later</h3>
 <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0">
-<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; border: 1px solid #2A3770; font-size: 13px; color: #A7B1D8"><span>Record 4,815</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace">b71d…09e3</span></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; border: 1px solid #2A3770; font-size: 13px; color: #A7B1D8"><span>Record 4,815</span><span>14:31:52</span></li>
 <li aria-hidden="true" style="height: 14px; width: 2px; background: #3A4A8C; margin-left: 24px"></li>
-<li style="display: flex; justify-content: space-between; gap: 12px; padding: 14px; border-radius: 11px; border: 1.5px solid #79D4FF; background: rgba(121,212,255,0.08); font-size: 14px"><span style="font-weight: 600">This record, 4,816</span><span style="font-family: 'JetBrains Mono', ui-monospace, monospace">4e8a…c21f</span></li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 14px; border-radius: 11px; border: 1.5px solid #79D4FF; background: rgba(121,212,255,0.08); font-size: 14px"><span style="font-weight: 600">This record, 4,816</span><span>14:32:08</span></li>
 <li aria-hidden="true" style="height: 14px; width: 2px; background: #3A4A8C; margin-left: 24px"></li>
 <li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 11px; border: 1px dashed #3A4A8C; font-size: 13px; color: #A7B1D8"><span>Next record</span><span>Not written yet</span></li>
 </ol>
-<p style="margin: 0; font-size: 13px; color: #A7B1D8">Signed with key <span style="font-family: 'JetBrains Mono', ui-monospace, monospace">k-2026-q4</span></p>
+<p style="margin: 0; font-size: 13px; line-height: 1.5; color: #A7B1D8">Each record is signed and linked to the one before, so any later change would show.</p>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
 <button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Replay this run</button>
@@ -518,8 +525,12 @@ select.rx-field{height:46px;padding:0 12px}
 <section id="questions" aria-labelledby="questions-title" style="padding: 0 24px 96px">
 <div style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; border-radius: 28px; background: #DFF3FF; color: #0E1633; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 36px 64px">
 <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px">
-<h2 id="questions-title" style="margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800">Does this match what your customers are asking?</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3B66">Reply to the message this link came with. One line is plenty.</p>
+<h2 id="questions-title" style="margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800">See Reach on your own agents.</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3B66">Early access is open to engineering teams whose customers ask what their AI agents can reach and do. Tell us how you handle that today, and we'll show you what Reach finds.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
+<a href="mailto:abhishekdwivedi131@gmail.com?subject=Reach%20early%20access" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #0E1633; color: #DFF3FF; font-size: 16px; font-weight: 700; text-decoration: none">Request early access</a>
+</div>
+<p style="margin: 0; font-size: 15px; color: #2F3B66">Or write to <a href="mailto:abhishekdwivedi131@gmail.com" style="color: #0E1633; font-weight: 600">abhishekdwivedi131@gmail.com</a></p>
 </div>
 <ol style="flex: 1 1 420px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
 <li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">1</span>Have customers asked what your AI agents can access, or for a record of what they did?</li>
@@ -530,8 +541,8 @@ select.rx-field{height:46px;padding:0 12px}
 </section>
 
 <footer style="max-width: 1200px; margin: 0 auto; padding: 0 24px 48px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 14px; color: #A7B1D8">
-<span>Reach is a concept for discussion.</span>
-<span>Every screen shows mock data. Nothing here is a live product.</span>
+<span>Reach HQ: see, control and prove what your AI agents do.</span>
+<span>Talk to us at <a href="mailto:abhishekdwivedi131@gmail.com" style="color: #EEF1FB">abhishekdwivedi131@gmail.com</a></span>
 </footer>
 
 </div>
@@ -815,7 +826,7 @@ select.rx-field{height:46px;padding:0 12px}
     }
     if (a.cta) actions.append(h('button', { type: 'button', class: a.owner ? 'rx-btn' : 'rx-btn-ghost', onclick: () => { closeDrawer(false); setTimeout(() => goTo(a.cta[1]), 280); } }, a.cta[0]));
     actions.append(h('button', { type: 'button', class: 'rx-btn-ghost', onclick: () => {
-      download(name + '.json', JSON.stringify({ agent: name, ...a, cta: undefined, note: 'Mock data from a concept page' }, null, 2), 'application/json');
+      download(name + '.json', JSON.stringify({ agent: name, ...a, cta: undefined, note: 'Example data' }, null, 2), 'application/json');
       toast('Downloaded ' + name + '.json');
     } }, 'Download report'));
     drawer.replaceChildren(
@@ -860,7 +871,10 @@ select.rx-field{height:46px;padding:0 12px}
   /* ---------- hero graph ---------- */
   const graph = $('#top svg[role="img"]');
   graph.setAttribute('role', 'group');
-  const gWrap = graph.parentElement; gWrap.style.position = 'relative';
+  const gScroll = graph.parentElement;
+  const gWrap = gScroll.parentElement; gWrap.style.position = 'relative';
+  gScroll.after(h('p', { class: 'rx-swipe' }, 'Swipe sideways to see the whole map'));
+  gScroll.addEventListener('scroll', () => { tip.hidden = true; }, { passive: true });
   const tip = h('div', { class: 'rx-tip', role: 'tooltip', id: 'rx-tip', hidden: true });
   gWrap.append(tip);
   const NODES = [
@@ -1039,7 +1053,7 @@ select.rx-field{height:46px;padding:0 12px}
     await wait(1000);
     blocks.forEach(b => { b.dataset.border = b.style.border; b.style.border = '1.5px solid #5BE3A8'; });
     setDone(verifyBtn, 'Verified');
-    toast('Chain intact. Signature valid for record 4,816.');
+    toast('History checked: record 4,816 and everything before it are unchanged.');
     setTimeout(() => { blocks.forEach(b => { b.style.border = b.dataset.border; }); setLabel(verifyBtn, 'Verify'); }, 5000);
   });
 
@@ -1055,7 +1069,7 @@ select.rx-field{height:46px;padding:0 12px}
       ],
       allowed_by: { rule: 'Refunds up to 4,999 are approved automatically when acting for a support user', permission_snapshot: 'g-2026-10-14.3' },
       seal: { record: 4816, record_hash: 'sha256:4e8a…c21f', previous_hash: 'sha256:b71d…09e3', key: 'k-2026-q4' },
-      note: 'Mock data from a concept page'
+      note: 'Example data'
     };
     download('act_8f92a1.json', JSON.stringify(record, null, 2), 'application/json');
     toast('Downloaded act_8f92a1.json');
