@@ -150,16 +150,16 @@ select.rx-field{height:46px;padding:0 12px}
 
 <section id="top" aria-labelledby="hero-title" style="padding: 64px 24px 112px; background: radial-gradient(55% 45% at 72% 62%, rgba(121,212,255,0.17), rgba(14,22,51,0) 70%), radial-gradient(30% 30% at 88% 40%, rgba(255,123,74,0.10), rgba(14,22,51,0) 70%)">
 <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px">
-<h1 id="hero-title" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 1000px">Answer customer security reviews about your AI agents with evidence.</h1>
-<p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #C3CBE8; max-width: 640px">Reach maps what each of your AI agents can actually touch, flags unsafe write access, and drafts answers to the agent questions in customer security reviews, each one backed by evidence.</p>
+<h1 id="hero-title" style="margin: 0; font-size: clamp(42px, 6.4vw, 82px); line-height: 1.0; letter-spacing: -0.04em; font-weight: 800; max-width: 1000px">Block unsafe AI agent actions at runtime, before they hit your database.</h1>
+<p style="margin: 0; font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: #C3CBE8; max-width: 640px">Reach sits inline between your agents and your tools. It checks every tool call against deterministic rules, blocks writes that follow untrusted input, holds high-risk actions for a person to approve, and keeps a tamper-evident record of every run.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px">
 <a href="#screens" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #79D4FF; color: #0E1633; font-size: 16px; font-weight: 700; text-decoration: none">See the product</a>
-<a href="#s4" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; border: 1px solid #3A4A8C; background: rgba(27,39,90,0.6); color: #EEF1FB; font-size: 16px; font-weight: 600; text-decoration: none">See a sample security review</a>
+<a href="#s2" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; border: 1px solid #3A4A8C; background: rgba(27,39,90,0.6); color: #EEF1FB; font-size: 16px; font-weight: 600; text-decoration: none">See how a write gets blocked</a>
 </div>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: 15px; color: #C3CBE8">
-<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Read-only to connect</li>
-<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Cloud, code and SaaS in one map</li>
-<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Evidence you can export</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Lightweight proxy or SDK wrapper</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Deterministic rules on tool arguments, with taint tracking</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9.5 7.5 13 14 5.5" fill="none" stroke="#79D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>Audit logs and security review answers, generated as you go</li>
 </ul>
 
 <div style="margin-top: 36px; border-radius: 22px; border: 1px solid #2E3C7A; background: #121B3E; box-shadow: 0 60px 140px -60px rgba(0,0,0,0.85), 0 0 0 6px rgba(121,212,255,0.04); overflow: hidden">
@@ -181,7 +181,7 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="flex: 100 1 560px; min-width: 0; padding: 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px">
 <h2 style="margin: 0; font-size: 22px; font-weight: 500; font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: -0.01em">support-triage</h2>
-<p style="margin: 0; font-size: 14px; color: #A7B1D8">Effective reach in production</p>
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Inline runtime policy check</p>
 </div>
 <div style="overflow-x: auto; border-radius: 14px; background: #101A3B">
 <svg viewBox="0 0 800 380" role="img" aria-label="Reach graph for support-triage. Inbound email, which is untrusted, feeds the agent. The agent runs as svc-support-agent, which can write to the Orders API, read customer data and post to team chat. The agent also reads help center articles. The risky path runs from inbound email through the agent to Orders API write access." style="width: 100%; min-width: 640px; height: auto; display: block; border-radius: 14px; background: #101A3B">
@@ -216,22 +216,22 @@ select.rx-field{height:46px;padding:0 12px}
 </svg>
 </div>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: #A7B1D8">
-<li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#FF7B4A" stroke-width="2.5" stroke-dasharray="6 3"></path></svg>Risky path: untrusted input reaches a write</li>
+<li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#FF7B4A" stroke-width="2.5" stroke-dasharray="6 3"></path></svg>Held by Reach: a write after untrusted input</li>
 <li style="display: flex; align-items: center; gap: 8px"><svg width="26" height="8" viewBox="0 0 26 8" aria-hidden="true"><path d="M1 4h24" stroke="#79D4FF" stroke-opacity="0.6" stroke-width="2"></path></svg>Access</li>
 </ul>
 </div>
-<aside aria-label="Top finding" style="flex: 1 1 280px; padding: 24px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 16px">
-<span style="align-self: flex-start; font-size: 13px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 12px">Critical</span>
-<h3 style="margin: 0; font-size: 21px; line-height: 1.3; letter-spacing: -0.015em">An outside email can lead this agent to change customer orders</h3>
-<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #C3CBE8">It reads every inbound email and runs as an identity that can write to the orders API. Nobody approves its writes.</p>
+<aside aria-label="Latest policy event" style="flex: 1 1 280px; padding: 24px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 16px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 12px">Policy triggered</span>
+<h3 style="margin: 0; font-size: 21px; line-height: 1.3; letter-spacing: -0.015em">Blocked an outside email from triggering an unapproved order refund</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #C3CBE8">support-triage read an untrusted inbound email, then tried to call the Orders API (write) without human approval.</p>
 <dl style="margin: 0; display: flex; flex-direction: column; gap: 0; font-size: 14px; border-top: 1px solid #2A3770">
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Reaches</dt><dd style="margin: 0; font-weight: 600">5 systems</dd></div>
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Can write to</dt><dd style="margin: 0; font-weight: 600; text-align: right">Orders API, team chat</dd></div>
-<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Owner</dt><dd style="margin: 0; font-weight: 600; color: #FFAA85">None assigned</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Policy</dt><dd style="margin: 0; font-weight: 600; text-align: right">Block write after untrusted input</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Action</dt><dd style="margin: 0; font-weight: 600; text-align: right">Held for human approval</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid #2A3770"><dt style="color: #A7B1D8">Check took</dt><dd style="margin: 0; font-weight: 600; font-family: 'JetBrains Mono', ui-monospace, monospace">1.4 ms</dd></div>
 </dl>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto">
-<a href="#s2" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 10px; background: #79D4FF; color: #0E1633; font-size: 14px; font-weight: 700; text-decoration: none">Review fixes</a>
-<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 14px; font-weight: 600">Assign owner</button>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 14px; font-weight: 700">Approve refund</button>
+<button type="button" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 14px; font-weight: 600">Deny</button>
 </div>
 </aside>
 </div>
@@ -240,27 +240,27 @@ select.rx-field{height:46px;padding:0 12px}
 </section>
 
 <section id="how" aria-labelledby="how-title" style="max-width: 1200px; margin: 0 auto; padding: 24px 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 44px">
-<h2 id="how-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; max-width: 760px">From the first connection to evidence you can hand over.</h2>
+<h2 id="how-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700; max-width: 760px">From inline interception to proof you can hand over.</h2>
 <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 32px">
 <li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #79D4FF">
 <span style="font-size: 15px; font-weight: 700; color: #79D4FF">Step 1</span>
-<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Connect, read-only</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Cloud accounts, code, SaaS apps and your identity provider. Nothing in them is changed.</p>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Wrap your tools or MCP servers</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Put a lightweight proxy or SDK in front of your existing APIs, databases and MCP tools. No changes to your agent framework.</p>
 </li>
 <li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #3A4A8C">
 <span style="font-size: 15px; font-weight: 700; color: #A7B1D8">Step 2</span>
-<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Map effective reach</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Follow chains of permissions to everything an agent can touch, not only what it was granted directly.</p>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Enforce rules on tool arguments</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Set deterministic limits on what a call can carry, like capping refund amounts or blocking writes once a session has read untrusted input.</p>
 </li>
 <li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #3A4A8C">
 <span style="font-size: 15px; font-weight: 700; color: #A7B1D8">Step 3</span>
-<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Flag risky combinations</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Agents that read untrusted content and can also change data, move money or send data out.</p>
+<h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Pause risky actions for approval</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Send sensitive changes to a person in Slack or your internal queue before the downstream API call runs.</p>
 </li>
 <li style="flex: 1 1 230px; display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 2px solid #FF7B4A">
 <span style="font-size: 15px; font-weight: 700; color: #FFAA85">Step 4</span>
 <h3 style="margin: 0; font-size: 21px; letter-spacing: -0.015em">Prove what happened</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">A sealed record of every agent action, ready to replay and to export for a review.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8">Every allowed, blocked or approved tool call is sealed as it happens, ready to replay or export for a customer security review.</p>
 </li>
 </ol>
 </section>
@@ -270,10 +270,10 @@ select.rx-field{height:46px;padding:0 12px}
 <section id="s1" aria-labelledby="s1-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
 <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Agent inventory</p>
-<h2 id="s1-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Every agent, who owns it, and what it can really reach.</h2>
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Live agent inventory</p>
+<h2 id="s1-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Every agent, its active write rules, and what it tried to touch.</h2>
 </div>
-<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Including agents nobody registered: ones that only show up as a service account or an app permission.</p>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Found from live runtime traffic, including unregistered bots calling internal APIs.</p>
 </div>
 <div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
@@ -340,54 +340,54 @@ select.rx-field{height:46px;padding:0 12px}
 <section id="s2" aria-labelledby="s2-title" style="max-width: 1200px; width: 100%; margin: 0 auto; padding: 0 24px 128px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
 <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
-<p style="margin: 0; font-size: 16px; font-weight: 600; color: #FFAA85">Findings</p>
-<h2 id="s2-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">The combinations that turn a helpful agent into an incident.</h2>
+<p style="margin: 0; font-size: 16px; font-weight: 600; color: #FFAA85">Runtime guardrails</p>
+<h2 id="s2-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Stop toxic combinations before the write runs.</h2>
 </div>
-<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">One permission alone can look harmless. The risk is the chain: untrusted input on one side, the power to change data on the other.</p>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">One tool call alone looks normal. The risk is the sequence: untrusted input enters the context, and a tool that changes data fires next.</p>
 </div>
 <div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
-<p style="margin: 0; font-size: 14px; color: #A7B1D8">Findings <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB">Outside email can change orders</span></p>
-<span style="font-size: 13px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 12px">Critical</span>
+<p style="margin: 0; font-size: 14px; color: #A7B1D8">Policies <span aria-hidden="true" style="color: #5A68A3">/</span> <span style="color: #EEF1FB">Block unapproved writes after untrusted email</span></p>
+<span style="font-size: 13px; font-weight: 700; background: #1B275A; color: #C3CBE8; border: 1px solid #3A4A8C; border-radius: 999px; padding: 4px 12px">Not deployed</span>
 </div>
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex: 3 1 480px; min-width: 0; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 26px">
 <div style="display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-size: 24px; line-height: 1.25; letter-spacing: -0.02em">An outside email can lead support-triage to change customer orders</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8; max-width: 620px">Instructions hidden in an email could be acted on, and a change would reach the orders database before any person sees it.</p>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; letter-spacing: -0.02em">How Reach gates support-triage in production</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #C3CBE8; max-width: 620px">When the agent reads an external email, Reach marks the session as tainted and holds high-risk Orders API changes until a person approves.</p>
 </div>
 <ol aria-label="Path from untrusted input to data change" style="list-style: none; margin: 0; padding: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: #101A3B; border: 1px solid #2A3770; border-radius: 14px">
 <li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #2B1F33; border: 1px solid #FF7B4A; border-radius: 10px"><span style="font-size: 12px; color: #FFAA85">Untrusted input</span><span style="font-size: 14px; font-weight: 600">Inbound email</span></li>
 <li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
 <li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #22306A; border: 1px solid #79D4FF; border-radius: 10px"><span style="font-size: 12px; color: #79D4FF">AI agent</span><span style="font-size: 14px; font-family: 'JetBrains Mono', ui-monospace, monospace">support-triage</span></li>
 <li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
-<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #1B275A; border: 1px solid #3A4A8C; border-radius: 10px"><span style="font-size: 12px; color: #A7B1D8">Runs as</span><span style="font-size: 14px; font-family: 'JetBrains Mono', ui-monospace, monospace">svc-support-agent</span></li>
+<li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: rgba(121,212,255,0.12); border: 1.5px solid #79D4FF; border-radius: 10px"><span style="font-size: 12px; color: #79D4FF">Policy check</span><span style="font-size: 14px; font-weight: 700">Reach</span></li>
 <li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
 <li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #2B1F33; border: 1px solid #FF7B4A; border-radius: 10px"><span style="font-size: 12px; color: #FFAA85">Write access</span><span style="font-size: 14px; font-weight: 600">Orders API</span></li>
 <li aria-hidden="true" style="display: flex"><svg width="24" height="14" viewBox="0 0 24 14"><path d="M1 7h20M15 2l5 5-5 5" fill="none" stroke="#FF7B4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></li>
 <li style="display: flex; flex-direction: column; gap: 3px; padding: 11px 14px; background: #1B275A; border: 1px solid #3A4A8C; border-radius: 10px"><span style="font-size: 12px; color: #A7B1D8">Data</span><span style="font-size: 14px; font-weight: 600">Orders database</span></li>
 </ol>
 <div style="display: flex; flex-direction: column; gap: 12px">
-<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">What it can do today</h4>
+<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">What the policy does</h4>
 <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5">
-<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Read any inbound customer email, including attachments</li>
-<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Cancel, change or refund any order through the orders API</li>
-<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Act with no approval step on any write</li>
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Marks the session as tainted when the agent reads an external email</li>
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Holds any Orders API write in a tainted session until a person approves</li>
+<li style="display: flex; gap: 10px"><span aria-hidden="true" style="flex: 0 0 8px; height: 8px; margin-top: 8px; border-radius: 50%; background: #FF7B4A"></span>Lets reads and replies to the customer through unchanged</li>
 </ul>
 </div>
 </div>
 <div style="flex: 2 1 340px; padding: 28px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 14px">
-<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Choose fixes</h4>
-<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Require approval for order changes</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">A person confirms cancellations and refunds before they run.</span></span></label>
-<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Limit write access to refunds</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Remove cancel and change from the agent's identity.</span></span></label>
-<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #2A3770; border-radius: 12px; cursor: pointer"><input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Split reading from acting</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">One agent reads email; a second, narrower one changes orders.</span></span></label>
+<h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Choose active rules</h4>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Require human approval for order changes</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Pause cancellations and refunds until a support lead approves.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Cap automatic refunds at 5,000</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Enforce an argument-level limit on the Orders API payload.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #2A3770; border-radius: 12px; cursor: pointer"><input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Block writes in tainted sessions</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Stop any write tool from firing after the agent reads untrusted external input.</span></span></label>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 14px; border-radius: 12px; background: #101A3B; border: 1px solid #2A3770">
-<span style="font-size: 14px; color: #C3CBE8">Risk with selected fixes</span>
+<span style="font-size: 14px; color: #C3CBE8">Risk with selected rules</span>
 <span style="display: flex; align-items: center; gap: 8px"><span style="font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 3px 10px">Critical</span><svg width="20" height="12" viewBox="0 0 20 12" aria-label="becomes" role="img"><path d="M1 6h16M12 1.5 17 6l-5 4.5" fill="none" stroke="#A7B1D8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 10px">Low</span></span>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px">
-<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Create ticket</button>
-<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Accept risk</button>
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #79D4FF; color: #0E1633; font-family: inherit; font-size: 15px; font-weight: 700">Deploy policy</button>
+<button type="button" style="min-height: 46px; padding: 0 20px; border-radius: 10px; border: 1px solid #3A4A8C; background: transparent; color: #EEF1FB; font-family: inherit; font-size: 15px; font-weight: 600">Monitor only</button>
 </div>
 </div>
 </div>
@@ -400,7 +400,7 @@ select.rx-field{height:46px;padding:0 12px}
 <p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Action records</p>
 <h2 id="s3-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">A sealed record of what an agent did, and why it was allowed.</h2>
 </div>
-<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Each record is locked to the one before it, so nobody can quietly change what happened. It also saves the permissions in force at that moment, so you can explain a decision months later.</p>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Every tool call Reach checks is locked to the record before it, with the exact arguments, the rule that applied and the approval state at that moment.</p>
 </div>
 <div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-bottom: 1px solid #2A3770; background: #151F45">
@@ -445,7 +445,7 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; border-radius: 14px; background: #101A3B; border: 1px solid #2A3770">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Why it was allowed</h3>
 <p style="margin: 0; font-size: 15px; line-height: 1.55">Refunds up to 4,999 are approved automatically for this agent when it acts for a support user.</p>
-<p style="margin: 0; font-size: 13px; color: #A7B1D8">Based on the permissions at the time, saved with this record.</p>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Rule: cap automatic refunds at 5,000. Saved with this record, along with the permissions at the time.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">History that can't be edited later</h3>
@@ -472,9 +472,9 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 56px">
 <div style="flex: 1 1 440px; display: flex; flex-direction: column; gap: 12px">
 <p style="margin: 0; font-size: 16px; font-weight: 600; color: #79D4FF">Security reviews</p>
-<h2 id="s4-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Answer a customer's questions about your agents from evidence.</h2>
+<h2 id="s4-title" style="margin: 0; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.03em; font-weight: 700">Answer customer security reviews using live runtime logs.</h2>
 </div>
-<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Answers are drafted only where there is evidence behind them. Everything else is left for you, so nothing is claimed that can't be shown.</p>
+<p style="flex: 1 1 340px; margin: 0; font-size: 17px; line-height: 1.6; color: #C3CBE8; max-width: 460px">Because every tool call passes through Reach, answers are drafted straight from the rules you enforce and the sealed records of what ran.</p>
 </div>
 <div style="border-radius: 20px; border: 1px solid #2E3C7A; background: #121B3E; overflow: hidden; box-shadow: 0 50px 120px -60px rgba(0,0,0,0.8)">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid #2A3770; background: #151F45">
@@ -526,16 +526,16 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="max-width: 1200px; margin: 0 auto; box-sizing: border-box; border-radius: 28px; background: #DFF3FF; color: #0E1633; padding: clamp(32px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 36px 64px">
 <div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px">
 <h2 id="questions-title" style="margin: 0; font-size: clamp(32px, 4vw, 52px); line-height: 1.05; letter-spacing: -0.035em; font-weight: 800">Build Reach with us.</h2>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3B66">We're building Reach alongside a small group of engineering teams whose enterprise customers ask what their AI agents can touch and do. Tell us how you handle security reviews today, and help shape how this gets solved.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #2F3B66">We're building Reach alongside a small group of engineering teams running AI agents that can write in production. Tell us how you gate high-risk tool calls today, and help shape the runtime firewall.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
 <a href="mailto:abhishekdwivedi131@gmail.com?subject=Reach%20design%20partner" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 12px; background: #0E1633; color: #DFF3FF; font-size: 16px; font-weight: 700; text-decoration: none">Request design partnership</a>
 </div>
 <p style="margin: 0; font-size: 15px; color: #2F3B66">Or write to <a href="mailto:abhishekdwivedi131@gmail.com" style="color: #0E1633; font-weight: 600">abhishekdwivedi131@gmail.com</a></p>
 </div>
 <ol style="flex: 1 1 420px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px">
-<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">1</span>Have customers asked what your AI agents can access, or for a record of what they did?</li>
-<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">2</span>Which of these four screens would you want first, if any?</li>
-<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">3</span>What is missing, or wrong for how your team works?</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">1</span>How do you stop agents from calling write tools with bad or prompt-injected arguments today?</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">2</span>Which of these four would save your team the most engineering time first?</li>
+<li style="display: flex; gap: 16px; align-items: flex-start; padding: 18px 20px; border-radius: 16px; background: #FFFFFF; font-size: 17px; line-height: 1.5"><span style="flex: 0 0 auto; width: 30px; height: 30px; border-radius: 50%; background: #0E1633; color: #DFF3FF; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700">3</span>What is missing, or wrong for how your agents run in production?</li>
 </ol>
 </div>
 </section>
@@ -632,7 +632,7 @@ select.rx-field{height:46px;padding:0 12px}
   const AGENTS = {
     'support-triage': { desc: 'Answers customer email and updates orders.', runsAs: 'svc-support-agent', owner: null, risk: 'Critical', canWrite: true,
       reach: [['Inbound email', 'Untrusted input', true], ['Orders API', 'Write', true], ['Customer data', 'Read', false], ['Team chat', 'Post messages', true], ['Help center', 'Read', false]],
-      seen: '2 minutes ago', actions: '1,284 in the last 7 days', cta: ['View finding', '#s2'] },
+      seen: '2 minutes ago', actions: '1,284 in the last 7 days', cta: ['View policy', '#s2'] },
     'refund-orchestrator': { desc: 'Issues refunds for eligible orders.', runsAs: 'svc-payments-agent', owner: 'Payments team', risk: 'High', canWrite: true,
       reach: [['Payments API', 'Refunds write', true], ['Orders DB', 'Read', false], ['Support desk', 'Read and write', true]],
       seen: '6 minutes ago', actions: '312 in the last 7 days', cta: ['Open latest record', '#s3'] },
@@ -727,11 +727,37 @@ select.rx-field{height:46px;padding:0 12px}
   });
   addEventListener('scroll', () => { if (openMenu && Math.abs(window.scrollY - openMenu.y) > 40) closeMenu(false); }, { passive: true });
 
-  /* ---------- hero finding ---------- */
+  /* ---------- hero: held action, approve or deny ---------- */
   const heroAside = $('#top aside');
-  const heroOwner = $$('dd', heroAside)[2];
-  const assignBtn = byText(heroAside, 'button', 'Assign owner');
-  assignBtn.addEventListener('click', () => ownerMenu(assignBtn, 'support-triage'));
+  const heroPill = heroAside.firstElementChild;
+  const heroPillCss = heroPill.style.cssText, heroPillText = heroPill.textContent;
+  const approveBtn = byText(heroAside, 'button', 'Approve refund');
+  const denyBtn = byText(heroAside, 'button', 'Deny');
+  const heroActions = approveBtn.parentElement;
+  const heroAction = $$('dd', heroAside)[1];
+  function resetHero() {
+    heroPill.style.cssText = heroPillCss; heroPill.textContent = heroPillText;
+    heroAction.textContent = 'Held for human approval';
+    setLabel(approveBtn, 'Approve refund'); setLabel(denyBtn, 'Deny');
+    heroActions.replaceChildren(approveBtn, denyBtn);
+    approveBtn.focus();
+  }
+  async function decide(ok) {
+    const btn = ok ? approveBtn : denyBtn;
+    (ok ? denyBtn : approveBtn).disabled = true;
+    setBusy(btn, ok ? 'Approving' : 'Denying');
+    await wait(600);
+    heroPill.style.cssText = pillCss(ok ? 'Low' : 'Muted') + 'align-self:flex-start;font-size:13px;padding:4px 12px';
+    heroPill.textContent = ok ? 'Approved by you' : 'Denied by you';
+    heroAction.textContent = ok ? 'Approved, refund sent' : 'Denied, agent told no';
+    const reset = h('button', { type: 'button', class: 'rx-btn-ghost', onclick: resetHero }, 'Reset');
+    heroActions.replaceChildren(h('a', { href: '#s2', class: 'rx-btn', style: 'display:inline-flex;align-items:center;text-decoration:none' }, 'See the rule'), reset);
+    reset.focus();
+    toast(ok ? 'Refund approved. support-triage carried on, and your approval is saved to its record.'
+             : 'Refund denied. support-triage was told the action is not allowed, and the denial is saved to its record.');
+  }
+  approveBtn.addEventListener('click', () => decide(true));
+  denyBtn.addEventListener('click', () => decide(false));
 
   /* ---------- agent table ---------- */
   const s1 = $('#s1');
@@ -790,10 +816,6 @@ select.rx-field{height:46px;padding:0 12px}
     AGENTS[name].owner = team;
     const ownerCell = rowByName[name].cells[2];
     ownerCell.textContent = team; ownerCell.style.color = '#EEF1FB'; ownerCell.style.fontWeight = '400';
-    if (name === 'support-triage') {
-      heroOwner.textContent = team; heroOwner.style.color = '#EEF1FB';
-      assignBtn.textContent = 'Change owner';
-    }
     updateCounts(); applyFilter();
     if (drawerAgent === name) renderDrawer(name, true);
     toast(team + ' now owns ' + name);
@@ -958,10 +980,10 @@ select.rx-field{height:46px;padding:0 12px}
   const s2 = $('#s2');
   const s2Pill = s2.children[1].children[0].lastElementChild;
   const fixInputs = $$('input[type="checkbox"]', s2);
-  const riskBox = $$('div', s2).find(d => d.firstElementChild && d.firstElementChild.textContent.trim() === 'Risk with selected fixes');
+  const riskBox = $$('div', s2).find(d => d.firstElementChild && d.firstElementChild.textContent.trim() === 'Risk with selected rules');
   const afterPill = riskBox.children[1].lastElementChild;
-  const createBtn = byText(s2, 'button', 'Create ticket');
-  const acceptBtn = byText(s2, 'button', 'Accept risk');
+  const createBtn = byText(s2, 'button', 'Deploy policy');
+  const acceptBtn = byText(s2, 'button', 'Monitor only');
   let ticketDone = false, accepted = false;
   function updateFixes() {
     const n = fixInputs.filter(i => i.checked).length;
@@ -973,7 +995,7 @@ select.rx-field{height:46px;padding:0 12px}
       l.style.background = i.checked ? 'rgba(121,212,255,0.07)' : 'transparent';
     });
     if (!ticketDone) {
-      createBtn.textContent = n ? 'Create ticket with ' + n + (n > 1 ? ' fixes' : ' fix') : 'Choose a fix first';
+      createBtn.textContent = n ? 'Deploy policy with ' + n + (n > 1 ? ' rules' : ' rule') : 'Choose a rule first';
       createBtn.disabled = n === 0;
     }
   }
@@ -981,31 +1003,32 @@ select.rx-field{height:46px;padding:0 12px}
   updateFixes();
 
   createBtn.addEventListener('click', async () => {
-    if (ticketDone) { toast('Ticket SEC-142 is already open'); return; }
+    if (ticketDone) { toast('Policy POL-142 is already active'); return; }
     const n = fixInputs.filter(i => i.checked).length;
     if (!n) return;
-    setBusy(createBtn, 'Creating ticket');
+    setBusy(createBtn, 'Deploying policy');
     await wait(900);
-    ticketDone = true;
-    setDone(createBtn, 'Ticket SEC-142 created');
-    if (!accepted) { s2Pill.style.cssText = pillCss('Medium') + 'font-size:13px;padding:4px 12px'; s2Pill.textContent = 'Fix in progress'; }
-    toast('Ticket SEC-142 created with ' + n + (n > 1 ? ' fixes' : ' fix'));
+    ticketDone = true; accepted = false;
+    setDone(createBtn, 'Policy POL-142 active');
+    s2Pill.style.cssText = pillCss('Low') + 'font-size:13px;padding:4px 12px'; s2Pill.textContent = 'Active in production';
+    acceptBtn.textContent = 'Monitor only';
+    toast('Policy POL-142 active in production with ' + n + (n > 1 ? ' rules' : ' rule'));
   });
 
   const dlg = h('dialog', { class: 'rx-dialog', 'aria-labelledby': 'rx-dlg-title' });
   document.body.append(dlg);
   acceptBtn.addEventListener('click', () => {
-    if (accepted) { toast('This risk is already accepted', 'warn'); return; }
-    const ta = h('textarea', { id: 'rx-reason', class: 'rx-field', rows: '4', placeholder: 'For example: support-triage is paused until the approval step ships.' });
+    if (accepted) { toast('Monitor mode is already on', 'warn'); return; }
+    const ta = h('textarea', { id: 'rx-reason', class: 'rx-field', rows: '4', placeholder: 'For example: watching real traffic for a week before we start blocking.' });
     const sel = h('select', { id: 'rx-days', class: 'rx-field' }, h('option', { value: '30' }, '30 days'), h('option', { value: '60' }, '60 days'), h('option', { value: '90' }, '90 days'));
-    const err = h('p', { class: 'rx-err', hidden: true }, 'Add a reason so reviewers know why this was accepted.');
+    const err = h('p', { class: 'rx-err', hidden: true }, 'Add a reason so reviewers know why blocking is off.');
     const form = h('form', { class: 'rx-dlg-form', method: 'dialog' },
-      h('h2', { id: 'rx-dlg-title' }, 'Accept this risk?'),
-      h('p', { class: 'rx-muted', style: 'line-height:1.55' }, 'The finding stays open and shows as accepted until the date you choose. Your name and reason are recorded.'),
+      h('h2', { id: 'rx-dlg-title' }, 'Run this policy in monitor mode?'),
+      h('p', { class: 'rx-muted', style: 'line-height:1.55' }, 'Matching tool calls are logged but not blocked until the date you choose. Your name and reason are recorded.'),
       h('label', { for: 'rx-reason', class: 'rx-label' }, 'Reason'), ta, err,
-      h('label', { for: 'rx-days', class: 'rx-label' }, 'Accept for'), sel,
+      h('label', { for: 'rx-days', class: 'rx-label' }, 'Monitor for'), sel,
       h('div', { class: 'rx-actions-row', style: 'margin-top:12px' },
-        h('button', { type: 'submit', class: 'rx-btn-warn' }, 'Accept risk'),
+        h('button', { type: 'submit', class: 'rx-btn-warn' }, 'Turn on monitor mode'),
         h('button', { type: 'button', class: 'rx-btn-ghost', onclick: () => dlg.close() }, 'Cancel')));
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -1014,9 +1037,9 @@ select.rx-field{height:46px;padding:0 12px}
       accepted = true;
       const until = new Date(Date.now() + Number(sel.value) * 864e5).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
       s2Pill.style.cssText = pillCss('Muted') + 'font-size:13px;padding:4px 12px';
-      s2Pill.textContent = 'Accepted until ' + until;
-      acceptBtn.textContent = 'Risk accepted';
-      toast('Risk accepted until ' + until + '. Reviewers will see your reason.');
+      s2Pill.textContent = 'Monitor mode until ' + until; ticketDone = false; updateFixes();
+      acceptBtn.textContent = 'Monitor mode on';
+      toast('Monitor mode on until ' + until + '. Matching calls are logged, not blocked.');
     });
     dlg.replaceChildren(form);
     dlg.showModal();
