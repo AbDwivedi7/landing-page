@@ -174,7 +174,7 @@ select.rx-field{height:46px;padding:0 12px}
 <nav aria-label="Product sections" style="flex: 1 1 180px; padding: 18px 12px; box-sizing: border-box; border-right: 1px solid #2A3770; display: flex; flex-direction: column; gap: 4px; font-size: 14px">
 <a href="#how" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="9" y="2" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="2" y="9" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect><rect x="9" y="9" width="5" height="5" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.5"></rect></svg>Overview</a>
 <a href="#s1" aria-current="page" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; background: #1F2C63; color: #EEF1FB; text-decoration: none; font-weight: 600"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="6" r="3" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M2.5 14c.8-2.6 3-4 5.5-4s4.7 1.4 5.5 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>Agents</a>
-<a href="#s2" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5h-13Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8 6.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>Findings<span style="margin-left: auto; font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 1px 8px">3</span></a>
+<a href="#s2" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2 14.5 13.5h-13Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M8 6.5v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>Policies<span style="margin-left: auto; font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 1px 8px">3</span></a>
 <a href="#s3" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"></rect><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>Action records</a>
 <a href="#s4" style="display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 0 12px; border-radius: 9px; color: #C3CBE8; text-decoration: none"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2h6l3 3v9H4Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><path d="M6.5 8.5 8 10l2.5-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>Security reviews</a>
 </nav>
@@ -291,8 +291,8 @@ select.rx-field{height:46px;padding:0 12px}
 <th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Agent</th>
 <th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Runs as</th>
 <th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Owner</th>
-<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Effective reach</th>
-<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Risk</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Tools it called</th>
+<th scope="col" style="padding: 14px 20px; border-bottom: 1px solid #2A3770; font-weight: 500">Write rules</th>
 </tr>
 </thead>
 <tbody>
@@ -301,35 +301,35 @@ select.rx-field{height:46px;padding:0 12px}
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-support-agent</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; color: #FFAA85; font-weight: 600">None</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Inbound email, untrusted</span><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Orders API, write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Customer data, read</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">2 more</span></div></td>
-<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: #FF7B4A; color: #1A0F0A; border-radius: 999px; padding: 4px 11px">Critical</span></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px; white-space: nowrap">Approval after untrusted input</span></td>
 </tr>
 <tr>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">refund-orchestrator</span><span style="font-size: 13px; color: #A7B1D8">Issues refunds</span></div></td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-payments-agent</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62">Payments team</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Payments API, refunds write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Orders DB, read</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Support desk, read and write</span></div></td>
-<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: rgba(255,123,74,0.16); color: #FFB596; border: 1px solid rgba(255,123,74,0.5); border-radius: 999px; padding: 3px 11px">High</span></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px; white-space: nowrap">Capped at $500</span></td>
 </tr>
 <tr>
-<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">hr-helper</span><span style="font-size: 13px; color: #A7B1D8">Not registered by anyone</span></div></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">hr-helper</span><span style="font-size: 13px; color: #A7B1D8">Seen calling the HR API, never registered</span></div></td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-size: 13px; color: #C3CBE8">App permission</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; color: #FFAA85; font-weight: 600">Unknown</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">HR system, employee records read</span><span style="font-size: 12px; background: rgba(255,123,74,0.15); color: #FFB596; border: 1px solid rgba(255,123,74,0.4); border-radius: 7px; padding: 4px 9px">Team chat, post</span></div></td>
-<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 700; background: rgba(255,123,74,0.16); color: #FFB596; border: 1px solid rgba(255,123,74,0.5); border-radius: 999px; padding: 3px 11px">High</span></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: rgba(255,123,74,0.16); color: #FFB596; border: 1px solid rgba(255,123,74,0.5); border-radius: 999px; padding: 3px 11px; white-space: nowrap">No rules yet</span></td>
 </tr>
 <tr>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">lead-enricher</span><span style="font-size: 13px; color: #A7B1D8">Updates sales contacts</span></div></td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-growth-bot</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62">Growth team</td>
 <td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">CRM contacts, read and write</span><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Web, outbound requests</span></div></td>
-<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px">Medium</span></td>
+<td style="padding: 18px 20px; border-bottom: 1px solid #222E62"><span style="font-size: 12px; font-weight: 600; background: #1B275A; color: #C3CBE8; border: 1px solid #3A4A8C; border-radius: 999px; padding: 3px 11px; white-space: nowrap">Monitor only</span></td>
 </tr>
 <tr>
 <td style="padding: 18px 20px"><div style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 500">sql-analyst</span><span style="font-size: 13px; color: #A7B1D8">Answers data questions</span></div></td>
 <td style="padding: 18px 20px; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; color: #C3CBE8">svc-analytics-ro</td>
 <td style="padding: 18px 20px">Data platform</td>
 <td style="padding: 18px 20px"><div style="display: flex; flex-wrap: wrap; gap: 6px"><span style="font-size: 12px; background: #1B275A; color: #D3D9F0; border-radius: 7px; padding: 4px 9px">Warehouse read, includes customer tables</span></div></td>
-<td style="padding: 18px 20px"><span style="font-size: 12px; font-weight: 600; background: rgba(121,212,255,0.12); color: #A9E2FF; border: 1px solid rgba(121,212,255,0.4); border-radius: 999px; padding: 3px 11px">Medium</span></td>
+<td style="padding: 18px 20px"><span style="font-size: 12px; font-weight: 600; background: rgba(91,227,168,0.12); color: #8CF0C4; border: 1px solid rgba(91,227,168,0.45); border-radius: 999px; padding: 3px 11px; white-space: nowrap">Read only</span></td>
 </tr>
 </tbody>
 </table>
@@ -379,7 +379,7 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="flex: 2 1 340px; padding: 28px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 14px">
 <h4 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Choose active rules</h4>
 <label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Require human approval for order changes</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Pause cancellations and refunds until a support lead approves.</span></span></label>
-<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Cap automatic refunds at 5,000</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Enforce an argument-level limit on the Orders API payload.</span></span></label>
+<label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #79D4FF; border-radius: 12px; background: rgba(121,212,255,0.07); cursor: pointer"><input type="checkbox" checked="" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Cap automatic refunds at $500</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Enforce an argument-level limit on the Orders API payload.</span></span></label>
 <label style="display: flex; gap: 12px; align-items: flex-start; padding: 14px; border: 1px solid #2A3770; border-radius: 12px; cursor: pointer"><input type="checkbox" style="width: 20px; height: 20px; margin: 2px 0 0; flex: 0 0 auto; accent-color: #79D4FF"><span style="display: flex; flex-direction: column; gap: 4px"><span style="font-size: 15px; font-weight: 600">Block writes in tainted sessions</span><span style="font-size: 13px; line-height: 1.5; color: #C3CBE8">Stop any write tool from firing after the agent reads untrusted external input.</span></span></label>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; padding: 14px; border-radius: 12px; background: #101A3B; border: 1px solid #2A3770">
 <span style="font-size: 14px; color: #C3CBE8">Risk with selected rules</span>
@@ -428,7 +428,7 @@ select.rx-field{height:46px;padding:0 12px}
 </li>
 <li style="display: flex; gap: 16px">
 <div aria-hidden="true" style="display: flex; flex-direction: column; align-items: center"><span style="width: 12px; height: 12px; border-radius: 50%; background: #FF7B4A; margin-top: 5px"></span></div>
-<div style="flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">issue_refund(order_id: 10492, amount: 4500)</span><span style="font-size: 14px; color: #FFAA85">Refund created</span></div>
+<div style="flex: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px"><span style="font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 14px">issue_refund(order_id: 10492, amount_usd: 450)</span><span style="font-size: 14px; color: #FFAA85">Refund created</span></div>
 </li>
 </ol>
 </div>
@@ -444,8 +444,8 @@ select.rx-field{height:46px;padding:0 12px}
 <div style="flex: 2 1 340px; padding: 28px; box-sizing: border-box; border-left: 1px solid #2A3770; background: #151F45; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-direction: column; gap: 8px; padding: 18px; border-radius: 14px; background: #101A3B; border: 1px solid #2A3770">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">Why it was allowed</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.55">Refunds up to 4,999 are approved automatically for this agent when it acts for a support user.</p>
-<p style="margin: 0; font-size: 13px; color: #A7B1D8">Rule: cap automatic refunds at 5,000. Saved with this record, along with the permissions at the time.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.55">Refunds up to $499 are approved automatically for this agent when it acts for a support user.</p>
+<p style="margin: 0; font-size: 13px; color: #A7B1D8">Rule: cap automatic refunds at $500. Saved with this record, along with the permissions at the time.</p>
 </div>
 <div style="display: flex; flex-direction: column; gap: 10px">
 <h3 style="margin: 0; font-size: 15px; font-weight: 600; color: #A7B1D8">History that can't be edited later</h3>
@@ -630,19 +630,19 @@ select.rx-field{height:46px;padding:0 12px}
 
   /* ---------- data ---------- */
   const AGENTS = {
-    'support-triage': { desc: 'Answers customer email and updates orders.', runsAs: 'svc-support-agent', owner: null, risk: 'Critical', canWrite: true,
+    'support-triage': { desc: 'Answers customer email and updates orders.', runsAs: 'svc-support-agent', owner: null, risk: 'Critical', rule: 'Approval after untrusted input', canWrite: true,
       reach: [['Inbound email', 'Untrusted input', true], ['Orders API', 'Write', true], ['Customer data', 'Read', false], ['Team chat', 'Post messages', true], ['Help center', 'Read', false]],
       seen: '2 minutes ago', actions: '1,284 in the last 7 days', cta: ['View policy', '#s2'] },
-    'refund-orchestrator': { desc: 'Issues refunds for eligible orders.', runsAs: 'svc-payments-agent', owner: 'Payments team', risk: 'High', canWrite: true,
+    'refund-orchestrator': { desc: 'Issues refunds for eligible orders.', runsAs: 'svc-payments-agent', owner: 'Payments team', risk: 'High', rule: 'Capped at $500', canWrite: true,
       reach: [['Payments API', 'Refunds write', true], ['Orders DB', 'Read', false], ['Support desk', 'Read and write', true]],
       seen: '6 minutes ago', actions: '312 in the last 7 days', cta: ['Open latest record', '#s3'] },
-    'hr-helper': { desc: 'Not registered by anyone. Found through an app permission in your HR system.', runsAs: 'App permission', owner: null, risk: 'High', canWrite: true,
+    'hr-helper': { desc: 'Seen calling the HR API in live traffic, but never registered. Runs on an app permission in your HR system.', runsAs: 'App permission', owner: null, risk: 'High', rule: 'No rules yet', canWrite: true,
       reach: [['HR system', 'Employee records read', false], ['Team chat', 'Post messages', true]],
       seen: 'Yesterday', actions: '47 in the last 7 days', cta: null },
-    'lead-enricher': { desc: 'Looks up companies on the web and updates sales contacts.', runsAs: 'svc-growth-bot', owner: 'Growth team', risk: 'Medium', canWrite: true,
+    'lead-enricher': { desc: 'Looks up companies on the web and updates sales contacts.', runsAs: 'svc-growth-bot', owner: 'Growth team', risk: 'Medium', rule: 'Monitor only', canWrite: true,
       reach: [['CRM contacts', 'Read and write', true], ['Web', 'Outbound requests', false]],
       seen: '1 hour ago', actions: '2,930 in the last 7 days', cta: null },
-    'sql-analyst': { desc: 'Answers data questions by querying the warehouse.', runsAs: 'svc-analytics-ro', owner: 'Data platform', risk: 'Medium', canWrite: false,
+    'sql-analyst': { desc: 'Answers data questions by querying the warehouse.', runsAs: 'svc-analytics-ro', owner: 'Data platform', risk: 'Medium', rule: 'Read only', canWrite: false,
       reach: [['Warehouse', 'Read, includes customer tables', false]],
       seen: '3 hours ago', actions: '164 in the last 7 days', cta: null }
   };
@@ -806,8 +806,8 @@ select.rx-field{height:46px;padding:0 12px}
 
   byText(s1, 'button', 'Export list').addEventListener('click', () => {
     const cell = v => /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
-    const lines = [['Agent', 'Description', 'Runs as', 'Owner', 'Effective reach', 'Risk']]
-      .concat(Object.entries(AGENTS).map(([n, a]) => [n, a.desc, a.runsAs, a.owner || 'None', a.reach.map(x => x[0] + ' (' + x[1] + ')').join('; '), a.risk]));
+    const lines = [['Agent', 'Description', 'Runs as', 'Owner', 'Tools it called', 'Write rules', 'Risk']]
+      .concat(Object.entries(AGENTS).map(([n, a]) => [n, a.desc, a.runsAs, a.owner || 'None', a.reach.map(x => x[0] + ' (' + x[1] + ')').join('; '), a.rule, a.risk]));
     download('agents.csv', lines.map(l => l.map(cell).join(',')).join('\n'), 'text/csv');
     toast('Downloaded agents.csv with ' + Object.keys(AGENTS).length + ' agents');
   });
@@ -855,8 +855,8 @@ select.rx-field{height:46px;padding:0 12px}
       h('div', { class: 'rx-drawer-head' }, h('div', null, h('p', { class: 'rx-muted' }, 'Agent'), h('h2', { id: 'rx-drawer-title' }, name)), closeBtn),
       h('p', { class: 'rx-drawer-desc' }, a.desc),
       h('span', { style: pillCss(a.risk) + 'align-self:flex-start' }, a.risk + ' risk'),
-      h('dl', { class: 'rx-dl' }, dRow('Runs as', a.runsAs), dRow('Owner', a.owner || 'None assigned', !a.owner), dRow('Last active', a.seen), dRow('Actions', a.actions)),
-      h('h3', { class: 'rx-h3' }, 'Effective reach'),
+      h('dl', { class: 'rx-dl' }, dRow('Runs as', a.runsAs), dRow('Owner', a.owner || 'None assigned', !a.owner), dRow('Write rules', a.rule, a.rule === 'No rules yet'), dRow('Last active', a.seen), dRow('Actions', a.actions)),
+      h('h3', { class: 'rx-h3' }, 'Tools it called'),
       h('ul', { class: 'rx-reach' }, a.reach.map(([sys, acc, hot]) => h('li', { class: hot ? 'hot' : '' }, h('span', { style: 'font-weight:600' }, sys), h('span', { class: 'rx-muted' }, acc)))),
       actions
     );
@@ -1088,9 +1088,9 @@ select.rx-field{height:46px;padding:0 12px}
       steps: [
         { call: 'get_order', args: { order_id: 10492 }, result: 'returned the order' },
         { call: 'check_refund_policy', args: { order_id: 10492 }, result: 'eligible under policy v12' },
-        { call: 'issue_refund', args: { order_id: 10492, amount: 4500 }, result: 'refund created' }
+        { call: 'issue_refund', args: { order_id: 10492, amount_usd: 450 }, result: 'refund created' }
       ],
-      allowed_by: { rule: 'Refunds up to 4,999 are approved automatically when acting for a support user', permission_snapshot: 'g-2026-10-14.3' },
+      allowed_by: { rule: 'Refunds up to $499 are approved automatically when acting for a support user', permission_snapshot: 'g-2026-10-14.3' },
       seal: { record: 4816, record_hash: 'sha256:4e8a…c21f', previous_hash: 'sha256:b71d…09e3', key: 'k-2026-q4' },
       note: 'Example data'
     };
@@ -1107,7 +1107,7 @@ select.rx-field{height:46px;padding:0 12px}
   const bar = barWrap.firstElementChild;
   const ANSWERS = [
     { q: 'Which systems and data can your AI agents access?', a: null, src: 'evidence' },
-    { q: 'How are agent write actions limited and approved?', a: 'Agents change data only through named identities with listed permissions. Refunds above 4,999 and every order cancellation need a person to approve them. Every write is recorded and sealed.', src: 'evidence', ev: 'Evidence: permission snapshot and approval rules from 14 Oct 2026' },
+    { q: 'How are agent write actions limited and approved?', a: 'Agents change data only through named identities with listed permissions. Refunds above $499 and every order cancellation need a person to approve them. Every write is recorded and sealed.', src: 'evidence', ev: 'Evidence: permission snapshot and approval rules from 14 Oct 2026' },
     { q: 'Can you show what an agent did for a specific customer?', a: 'Yes. Every agent action is stored as a sealed record linked to the customer it served, and we can export those records for any customer on request.', src: 'evidence', ev: 'Evidence: sealed action records, searchable by customer' },
     { q: "Do model providers train on your customers' data?", a: null, src: 'you' },
     { q: 'Where is customer data processed and stored?', a: null, src: 'you' }
